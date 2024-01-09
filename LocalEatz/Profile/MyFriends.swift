@@ -9,11 +9,13 @@ import SwiftUI
 
 struct MyFriends: View {
     var body: some View {
+        NavigationView{
             VStack{
-                Text("My Friends")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding(.bottom)
+//                Text("My Friends")
+//                    .font(.title2)
+//                    .fontWeight(.bold)
+//                    .padding(.bottom)
+                
                 ScrollView{
                     VStack{
                         HStack{
@@ -86,11 +88,14 @@ struct MyFriends: View {
                     
                     Spacer()
                 }
-                    
+                
             }
             .padding()
             .background(Color("backgroundColor"))
-
+            
+        }
+        .navigationTitle("My Friends")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

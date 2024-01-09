@@ -133,8 +133,7 @@ struct ProfileView: View {
                 Spacer()
             }.padding()
                 .background(Color("backgroundColor"))
-        }
-        
+        }        
     }
 }
 

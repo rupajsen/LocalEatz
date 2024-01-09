@@ -21,63 +21,67 @@ struct AddFoodie: View {
     @State private var friendName = ""
     @State private var showDetails = false
     var body: some View {
-        VStack{
-            ZStack {
-                Text("Add Friends")
-                    .font(.title2)
-                    .fontWeight(.bold)
-            }
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.top)
-            ScrollView{
-                Text("Name of friend")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                
-                TextField("Enter Friend Name", text: $friendName)
-                    .padding([.leading,.trailing,.bottom])
+        NavigationView{
+            VStack{
+//                ZStack {
+//                    Text("Add Friends")
+//                        .font(.title2)
+//                        .fontWeight(.bold)
+//                }
+//                .frame(maxWidth: .infinity, alignment: .center)
+//                .padding(.top)
+                ScrollView{
+                    Text("Name of friend")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
+                    
+                    TextField("Enter Friend Name", text: $friendName)
+                        .padding([.leading,.trailing,.bottom])
                     //.padding(.trailing)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Button("Find Friend") 
-                {
-                    showDetails.toggle()
-                }
-                .buttonStyle(GrowingButton())
-                .padding(.bottom)
-
-                            if showDetails {
-                                HStack{
-                                    Image("person2")
-                                        .resizable()
-                                        .cornerRadius(15)
-                                        .frame(width: 70, height: 70)
-                                        .padding(.trailing)
-                                    VStack{
-                                        Text("Dewashish Dubey")
-                                            .font(.system(size:  21))
-                                            .frame(maxWidth: .infinity,alignment: .leading)
-                                        Text("Muzaffarpur, Bihar")
-                                            .font(.system(size: 16, weight: .thin, design: .rounded))
-                                            .frame(maxWidth: .infinity,alignment: .leading)
-                                        Button("Add Friend"){}
-                                            .buttonStyle(GrowingButton())
-                                            .frame(maxWidth: .infinity,alignment: .leading)
-                                    }
-                                }
-                                .padding()
-                                .frame(maxWidth: 350,maxHeight:160,alignment:.leading)
-                                .background(Color.white)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    Button("Find Friend")
+                    {
+                        showDetails.toggle()
+                    }
+                    .buttonStyle(GrowingButton())
+                    .padding(.bottom)
+                    
+                    if showDetails {
+                        HStack{
+                            Image("person2")
+                                .resizable()
                                 .cornerRadius(15)
-                                .padding(.bottom)
+                                .frame(width: 70, height: 70)
+                                .padding(.trailing)
+                            VStack{
+                                Text("Dewashish Dubey")
+                                    .font(.system(size:  21))
+                                    .frame(maxWidth: .infinity,alignment: .leading)
+                                Text("Muzaffarpur, Bihar")
+                                    .font(.system(size: 16, weight: .thin, design: .rounded))
+                                    .frame(maxWidth: .infinity,alignment: .leading)
+                                Button("Add Friend"){}
+                                    .buttonStyle(GrowingButton())
+                                    .frame(maxWidth: .infinity,alignment: .leading)
                             }
-                Spacer()
+                        }
+                        .padding()
+                        .frame(maxWidth: 350,maxHeight:160,alignment:.leading)
+                        .background(Color.white)
+                        .cornerRadius(15)
+                        .padding(.bottom)
+                    }
+                    Spacer()
+                }
+                
             }
-            
+            .background(Color("backgroundColor"))
         }
-        .background(Color("backgroundColor"))
+        .navigationTitle("Add Foodie")
+        .navigationBarTitleDisplayMode(.inline)
     
     }
 }
