@@ -9,11 +9,12 @@ import SwiftUI
 
 struct MyReviews: View {
     var body: some View {
+        NavigationView{
             VStack{
-                    Text("My Reviews")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .padding()
+//                Text("My Reviews")
+//                    .font(.title2)
+//                    .fontWeight(.bold)
+//                    .padding()
                 ScrollView{
                     VStack{
                         HStack{
@@ -73,6 +74,9 @@ struct MyReviews: View {
             }
             .padding()
             .background(Color("backgroundColor"))
+        }
+        .navigationTitle("My Reviews")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

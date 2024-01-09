@@ -19,37 +19,38 @@ struct MapView: View {
     
     var body: some View {
         
-    
-        VStack {
-            ZStack {
-                       /* HStack {
-                            Image(systemName: "line.3.horizontal")
-                                .resizable()
-                                .padding()
-                                .frame(width: 50, height: 50)
-                            
-                            Spacer()
-                        }*/
-                        
-                        Text("Foodie Map")
-                            .font(.title2)
-                            .fontWeight(.bold)
+        NavigationView{
+            VStack {
+                ZStack {
+                    /* HStack {
+                     Image(systemName: "line.3.horizontal")
+                     .resizable()
+                     .padding()
+                     .frame(width: 50, height: 50)
+                     
+                     Spacer()
+                     }*/
+                    
+                    Text("Foodie Map")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    
+                    
+                    
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
                 
-                
-                
-                    }
-                    .frame(maxWidth: .infinity, alignment: .center)
-            
-            Map(){
-                
-                Marker("Rupaj", systemImage: "person.circle", coordinate: a)
-                    .tint(.blue)
-                
-                Marker("Tanya", systemImage: "person.circle", coordinate: b)
-                    .tint(.blue)
-                
-                Marker("Dewashish", systemImage: "person.circle", coordinate: c)
-                    .tint(.blue)
+                Map(){
+                    
+                    Marker("Rupaj", systemImage: "person.circle", coordinate: a)
+                        .tint(.blue)
+                    
+                    Marker("Tanya", systemImage: "person.circle", coordinate: b)
+                        .tint(.blue)
+                    
+                    Marker("Dewashish", systemImage: "person.circle", coordinate: c)
+                        .tint(.blue)
+                }
             }
         }
     }
