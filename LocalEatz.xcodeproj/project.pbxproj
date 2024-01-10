@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F05301A2B31A5A400396656 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0530192B31A5A400396656 /* ProfileView.swift */; };
 		3F05301C2B32CCC900396656 /* ReviewSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F05301B2B32CCC900396656 /* ReviewSubView.swift */; };
-		3F0E15802B2DFD42001A3BBB /* MapViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E157F2B2DFD42001A3BBB /* MapViewApp.swift */; };
+		3F0E15802B2DFD42001A3BBB /* LocalEatzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E157F2B2DFD42001A3BBB /* LocalEatzApp.swift */; };
 		3F0E15822B2DFD42001A3BBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E15812B2DFD42001A3BBB /* ContentView.swift */; };
 		3F0E15842B2DFD43001A3BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E15832B2DFD43001A3BBB /* Assets.xcassets */; };
 		3F0E15872B2DFD43001A3BBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E15862B2DFD43001A3BBB /* Preview Assets.xcassets */; };
@@ -37,7 +37,7 @@
 		3F0530192B31A5A400396656 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3F05301B2B32CCC900396656 /* ReviewSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSubView.swift; sourceTree = "<group>"; };
 		3F0E157C2B2DFD42001A3BBB /* LocalEatz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalEatz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F0E157F2B2DFD42001A3BBB /* MapViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewApp.swift; sourceTree = "<group>"; };
+		3F0E157F2B2DFD42001A3BBB /* LocalEatzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEatzApp.swift; sourceTree = "<group>"; };
 		3F0E15812B2DFD42001A3BBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3F0E15832B2DFD43001A3BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F0E15862B2DFD43001A3BBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				A14227B72B4E72120000EE4F /* Model */,
-				3F0E157F2B2DFD42001A3BBB /* MapViewApp.swift */,
+				3F0E157F2B2DFD42001A3BBB /* LocalEatzApp.swift */,
 				3FD4A9992B30B5B900380DEC /* FirstScreen.swift */,
 				3F0E15812B2DFD42001A3BBB /* ContentView.swift */,
 				3F3B1E232B3C7ED100FE49E7 /* HomeView.swift */,
@@ -101,9 +101,7 @@
 				3F6D71152B348C9900135C37 /* ReviewView.swift */,
 				3F05301B2B32CCC900396656 /* ReviewSubView.swift */,
 				3F0E15912B2E1FA1001A3BBB /* MapView.swift */,
-				7FA2A8662B4E9D1D00C450A6 /* PlannedTrips.swift */,
-				3F0E15932B2E2CE3001A3BBB /* ItineraryView.swift */,
-				3F6D71112B3484EC00135C37 /* ItineraryView2.swift */,
+				7FA2A8682B4EAEB500C450A6 /* Itinerary */,
 				3FDEE7A52B407CAE003D9275 /* Profile */,
 				3F1642482B4A97B4000BB5B3 /* login_page.swift */,
 				3F1642492B4A97B4000BB5B3 /* signup_page.swift */,
@@ -133,6 +131,16 @@
 				A1FF98002B4594E400CDDAAE /* AddFoodie.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		7FA2A8682B4EAEB500C450A6 /* Itinerary */ = {
+			isa = PBXGroup;
+			children = (
+				3F0E15932B2E2CE3001A3BBB /* ItineraryView.swift */,
+				7FA2A8662B4E9D1D00C450A6 /* PlannedTrips.swift */,
+				3F6D71112B3484EC00135C37 /* ItineraryView2.swift */,
+			);
+			path = Itinerary;
 			sourceTree = "<group>";
 		};
 		A14227B72B4E72120000EE4F /* Model */ = {
@@ -220,7 +228,7 @@
 				3F6D71162B348C9900135C37 /* ReviewView.swift in Sources */,
 				3F0E15822B2DFD42001A3BBB /* ContentView.swift in Sources */,
 				3FDEE7A22B401A18003D9275 /* PlacesVisited.swift in Sources */,
-				3F0E15802B2DFD42001A3BBB /* MapViewApp.swift in Sources */,
+				3F0E15802B2DFD42001A3BBB /* LocalEatzApp.swift in Sources */,
 				3FDEE7A42B407ABC003D9275 /* MyReviews.swift in Sources */,
 				3F0E15942B2E2CE3001A3BBB /* ItineraryView.swift in Sources */,
 				3FBB01D22B3DC68C00B18F04 /* AddRestaurant.swift in Sources */,

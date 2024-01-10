@@ -17,7 +17,7 @@ struct IntroductionData: Identifiable,Hashable
 }
 
 var Cards : [IntroductionData] = [
-    .init(title: "Restaurant Recommendations", subTitle: "local food recommendations for authentic dining experience", image: "image1"),
+    .init(title: "Restaurant Recommendations", subTitle: "Local food recommendations for authentic dining experience", image: "image1"),
     .init(title: "New York", subTitle: "Planned itinerary for smooth travel", image: "image2"),
     .init(title: "Prague", subTitle: "Locate where your friends at", image: "image3")
 ]

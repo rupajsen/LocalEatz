@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct MapViewApp: App {
+struct LocalEatzApp: App {
     var body: some Scene {
         WindowGroup {
             FirstScreen()
