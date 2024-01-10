@@ -131,7 +131,7 @@ struct ReviewView: View {
             .background(Color("backgroundColor"))
         }
         .navigationTitle("Reviews")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 

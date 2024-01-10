@@ -95,7 +95,7 @@ struct MyFriends: View {
             
         }
         .navigationTitle("My Friends")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 

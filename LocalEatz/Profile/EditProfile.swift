@@ -20,28 +20,28 @@ struct EditProfile: View {
     
     
     var body: some View {
-    
-        VStack {
-            ZStack {
+        NavigationView{
+            VStack {
+//                ZStack {
+//                    
+//                    
+//                    Text("Account")
+//                        .font(.title2)
+//                        .fontWeight(.bold)
+//                }
+//                .frame(maxWidth: .infinity, alignment: .center)
+//                .padding()
                 
+                Image("profileImage")
+                    .frame(width: 100,height: 100)
+                    .clipShape(Circle())
+                    .overlay {
+                        Circle().stroke(.white, lineWidth: 4)
+                    }
+                    .shadow(radius: 7)
+                    .padding()
                 
-                Text("Account")
-                    .font(.title2)
-                    .fontWeight(.bold)
-            }
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding()
-            
-            Image("profileImage")
-                .frame(width: 100,height: 100)
-                .clipShape(Circle())
-                .overlay {
-                    Circle().stroke(.white, lineWidth: 4)
-                }
-                .shadow(radius: 7)
-                .padding()
-            
-            Form{
+                Form{
                     Section(header: Text("PERSONAL INFORMATION")){
                         TextField("First Name", text: $firstName)
                         TextField("Last Name", text: $lastName)
@@ -54,28 +54,31 @@ struct EditProfile: View {
                         TextField("EMail ID", text: $email)
                     }
                     
+                }
+                
+                HStack{
+                    Text("Update")
+                        .font(.system(size: 24, weight: .regular, design: .rounded))
+                        .padding()
+                        .foregroundColor(.white)
+                }.frame(maxWidth: .infinity,alignment: .center)
+                    .background(
+                        Color("orange")
+                            .cornerRadius(20))
+                    .padding([.horizontal],15)
+                    .padding([.bottom],10)
+                    .padding([.top],5)
+                
+                
+                
             }
-            
-            HStack{
-                Text("Update")
-                    .font(.system(size: 24, weight: .regular, design: .rounded))
-                    .padding()
-                    .foregroundColor(.white)
-            }.frame(maxWidth: .infinity,alignment: .center)
-                .background(
-                    Color("orange")
-                        .cornerRadius(20))
-                .padding([.horizontal],15)
-                .padding([.bottom],10)
-                .padding([.top],5)
+            .background(Color("backgroundColor"))
             
             
-         
+            
         }
-        .background(Color("backgroundColor"))
-            
-    
-        
+        .navigationTitle("Account")
+        .navigationBarTitleDisplayMode(.automatic)
     }
         
 }

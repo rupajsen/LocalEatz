@@ -81,7 +81,7 @@ struct AddFoodie: View {
             .background(Color("backgroundColor"))
         }
         .navigationTitle("Add Foodie")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.automatic)
     
     }
 }

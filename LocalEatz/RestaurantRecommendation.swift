@@ -35,38 +35,6 @@ struct RestaurantRecommendation: View {
                     .padding(.bottom)
                         
                     
-
-                    HStack{
-                        Image("chdg")
-                            .padding()
-                        VStack{
-                            Text("Welcome")
-                                .font(.system(size:30, weight: .semibold, design: .rounded))
-                                .foregroundStyle(.white)
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                            Text("to")
-                                .font(.system(size:30, weight: .semibold, design: .rounded))
-                                .foregroundStyle(.white)
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                            Text("Chandigarh")
-                                .font(.system(size:35, weight: .semibold, design: .rounded))
-                                .foregroundStyle(.white)
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                            
-                            Text("Know more")
-                                .underline()
-                                .font(.system(size:15, weight: .semibold, design: .rounded))
-                                .foregroundStyle(.white)
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                             
-                        }.padding([.trailing],10)
-                    }
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                        .background(Color("orange"))
-                        .cornerRadius(10)
-                        .padding([.horizontal],15)
-                        .padding([.bottom],10)
-                    
                     VStack
                     {
                         HStack{

@@ -188,7 +188,7 @@ struct AddRestaurant: View {
             .background(Color("backgroundColor"))
         }
         .navigationTitle("Add Restaurant")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 

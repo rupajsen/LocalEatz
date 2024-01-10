@@ -76,7 +76,7 @@ struct MyReviews: View {
             .background(Color("backgroundColor"))
         }
         .navigationTitle("My Reviews")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 

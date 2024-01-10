@@ -194,7 +194,7 @@ struct PlacesVisited: View {
             .background(Color("backgroundColor"))
         }
         .navigationTitle("Places Visited")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 
