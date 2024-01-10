@@ -27,6 +27,7 @@
 		3FDEE7A22B401A18003D9275 /* PlacesVisited.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE7A12B401A18003D9275 /* PlacesVisited.swift */; };
 		3FDEE7A42B407ABC003D9275 /* MyReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE7A32B407ABC003D9275 /* MyReviews.swift */; };
 		3FDEE7A72B4087D5003D9275 /* MyFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE7A62B4087D5003D9275 /* MyFriends.swift */; };
+		7FA2A8632B4E5C0C00C450A6 /* RestaurantRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */; };
 		A1FF98012B4594E400CDDAAE /* AddFoodie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF98002B4594E400CDDAAE /* AddFoodie.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		3FDEE7A12B401A18003D9275 /* PlacesVisited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVisited.swift; sourceTree = "<group>"; };
 		3FDEE7A32B407ABC003D9275 /* MyReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviews.swift; sourceTree = "<group>"; };
 		3FDEE7A62B4087D5003D9275 /* MyFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriends.swift; sourceTree = "<group>"; };
+		7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRecommendation.swift; sourceTree = "<group>"; };
 		A1FF98002B4594E400CDDAAE /* AddFoodie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				3FD4A9992B30B5B900380DEC /* FirstScreen.swift */,
 				3F0E15812B2DFD42001A3BBB /* ContentView.swift */,
 				3F3B1E232B3C7ED100FE49E7 /* HomeView.swift */,
+				7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */,
 				3F6D71132B348C7200135C37 /* AboutView.swift */,
 				3F6D71152B348C9900135C37 /* ReviewView.swift */,
 				3F05301B2B32CCC900396656 /* ReviewSubView.swift */,
@@ -207,6 +210,7 @@
 				3F0E15942B2E2CE3001A3BBB /* ItineraryView.swift in Sources */,
 				3FBB01D22B3DC68C00B18F04 /* AddRestaurant.swift in Sources */,
 				3F6D71122B3484EC00135C37 /* ItineraryView2.swift in Sources */,
+				7FA2A8632B4E5C0C00C450A6 /* RestaurantRecommendation.swift in Sources */,
 				3F97E4052B4C7CC0004A8BA9 /* EditProfile.swift in Sources */,
 				3F3B1E242B3C7ED100FE49E7 /* HomeView.swift in Sources */,
 				3F6D71142B348C7200135C37 /* AboutView.swift in Sources */,

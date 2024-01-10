@@ -1,13 +1,14 @@
 //
-//  ContentView.swift
-//  HomePage
+//  RestaurantRecommendation.swift
+//  LocalEatz
 //
-//  Created by user1 on 19/12/23.
+//  Created by user1 on 10/01/24.
 //
 
+import Foundation
 import SwiftUI
 
-struct HomeView: View {
+struct RestaurantRecommendation: View {
     var body: some View {
         NavigationView
         {
@@ -24,7 +25,7 @@ struct HomeView: View {
                             .foregroundColor(.orange)
                             .padding(.leading,40)
                             .padding(.trailing)
-                        NavigationLink(destination: login_page().navigationBarBackButtonHidden(true)) {
+                        NavigationLink(destination: login_page()) {
                             Image(systemName: "person.crop.circle")
                                 .resizable()
                                 .frame(width:36,height:36)
@@ -99,9 +100,9 @@ struct HomeView: View {
                                     {
                                         Image(systemName: "star.fill")
                                             .symbolRenderingMode(.multicolor)
-                                        Text("4.3")
+                                        Text("4.5")
                                             .font(.system(size: 14, weight: .thin, design: .rounded))
-                                        Text("(35+)")
+                                        Text("(25+)")
                                             .font(.system(size: 14, weight: .thin, design: .rounded))
                                     }
                                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
@@ -142,10 +143,10 @@ struct HomeView: View {
                                 
                                 VStack
                                 {
-                                    Image("garg")
+                                    Image("dhaba")
                                         .resizable()
                                         .frame(width:200,height: 100)
-                                    Text("Garg Chaat")
+                                    Text("Gulshan Dhaba")
                                         .font(.system(size: 18, weight: .medium, design: .rounded))
                                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
                                         .padding(.bottom,-3)
@@ -154,9 +155,9 @@ struct HomeView: View {
                                     {
                                         Image(systemName: "star.fill")
                                             .symbolRenderingMode(.multicolor)
-                                        Text("4.2")
+                                        Text("4.5")
                                             .font(.system(size: 14, weight: .thin, design: .rounded))
-                                        Text("(20+)")
+                                        Text("(25+)")
                                             .font(.system(size: 14, weight: .thin, design: .rounded))
                                     }
                                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
@@ -166,7 +167,7 @@ struct HomeView: View {
                                     {
                                         Image(systemName: "clock")
                                             .symbolRenderingMode(.multicolor)
-                                        Text("10 mins")
+                                        Text("10-15 mins")
                                             .font(.system(size: 14, weight: .thin, design: .rounded))
                                     }
                                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
@@ -274,5 +275,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    RestaurantRecommendation()
 }

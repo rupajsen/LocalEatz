@@ -18,11 +18,11 @@ struct ContentView: View {
                         Image(systemName: "house")
                         Text("Home")
                     }
-                //hello
-                MapView()
+                
+                RestaurantRecommendation()
                     .tabItem {
-                        Image(systemName: "mappin.and.ellipse")
-                        Text("Foodie Map")
+                        Image(systemName: "fork.knife")
+                        Text("Near Me")
                     }
                 
                 ItineraryView()
@@ -31,12 +31,11 @@ struct ContentView: View {
                         Text("Itinerary")
                     }
                 
-                login_page()
+                MapView()
                     .tabItem {
-                        Image(systemName: "person.crop.circle")
-                        Text("Profile")
+                        Image(systemName: "mappin.and.ellipse")
+                        Text("Foodie Map")
                     }
-                
             }
         }
     }
