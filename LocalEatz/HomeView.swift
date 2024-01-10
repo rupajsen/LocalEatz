@@ -58,7 +58,7 @@ struct HomeView: View {
                         }.padding([.trailing],10)
                     }
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                    .background(Color("orange"))
+                    .background(Color("Orange"))
                     .cornerRadius(10)
                     .padding([.horizontal],15)
                     .padding([.bottom],10)

@@ -177,7 +177,7 @@ struct AddRestaurant: View {
                             .foregroundColor(.white)
                     }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .center)
                         .background(
-                            Color("orange")
+                            Color("Orange")
                                 .cornerRadius(20))
                         .padding([.horizontal],15)
                         .padding([.bottom],10)

@@ -111,7 +111,7 @@ struct FirstScreen: View {
             }
             .background
             {
-                Color("orange")
+                Color("Orange")
                     .ignoresSafeArea()
             }
         }

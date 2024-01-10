@@ -63,7 +63,7 @@ struct EditProfile: View {
                         .foregroundColor(.white)
                 }.frame(maxWidth: .infinity,alignment: .center)
                     .background(
-                        Color("orange")
+                        Color("Orange")
                             .cornerRadius(20))
                     .padding([.horizontal],15)
                     .padding([.bottom],10)
