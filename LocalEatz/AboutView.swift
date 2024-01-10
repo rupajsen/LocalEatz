@@ -51,17 +51,20 @@ struct AboutView: View {
                         .padding(.top,-3)
                         .padding(.bottom,10)
                     
-                    HStack{
-                        NavigationLink("Add Review", destination: ReviewSubView())
+                    
+                    NavigationLink {
+                        ReviewSubView().navigationBarBackButtonHidden(true)
+                    } label: {
+                        Text("Add Review")
                             .font(.system(size: 20, weight: .regular, design: .rounded))
-                            .padding()
+                            .padding(15)
+                            .padding(.horizontal,90)
                             .foregroundColor(.white)
+                            .background(Color("orange")
+                                .cornerRadius(25))
+                            .padding(.bottom)
+
                     }
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .center)
-                        .background(
-                            Color("orange")
-                                .cornerRadius(30))
-                        .padding(.bottom)
                     
                     HStack
                     {

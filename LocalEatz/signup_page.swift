@@ -46,14 +46,20 @@ struct signup_page: View {
                         .font(.system(size: 16, weight: .thin, design: .rounded))
                         .padding(.bottom,30)
                         
-                        NavigationLink("Sign-up", destination: ProfileView().navigationBarBackButtonHidden(true))
-                            .font(.system(size: 24, weight: .bold, design: .rounded))
-                            .foregroundColor(Color.white)
-                            .padding(15)
-                            .padding(.horizontal,80)
-                            .background(
-                                Color("orange")
-                                    .cornerRadius(20))
+                        
+                        NavigationLink {
+                            ProfileView().navigationBarBackButtonHidden(true)
+                        } label: {
+                            Text("Sign-up")
+                                .font(.system(size: 24, weight: .bold, design: .rounded))
+                                .foregroundColor(Color.white)
+                                .padding(15)
+                                .padding(.horizontal,80)
+                                .background(
+                                    Color("orange")
+                                        .cornerRadius(20))
+
+                        }
                         NavigationLink("Already a member? Login", destination: login_page())
                             .foregroundColor(.orange)
                         Spacer()

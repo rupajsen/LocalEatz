@@ -100,7 +100,21 @@ struct ItineraryView: View {
                     
                     
                     
-                    HStack{
+                    NavigationLink {
+                        ItineraryView2().navigationBarBackButtonHidden(false)
+                    } label: {
+                        Text("Get Itinerary")
+                            .font(.system(size: 24, weight: .regular, design: .rounded))
+                            .padding(15)
+                            .padding(.horizontal,90)
+                            .foregroundColor(.white)
+                            .background(Color("orange")
+                                .cornerRadius(25))
+                            .padding(.bottom)
+
+                    }
+                    
+                    /*HStack{
                         NavigationLink("Get Itinerary", destination: ItineraryView2())
                             .font(.system(size: 24, weight: .regular, design: .rounded))
                             .padding()
@@ -111,7 +125,7 @@ struct ItineraryView: View {
                                 .cornerRadius(20))
                         .padding([.horizontal],15)
                         .padding([.bottom],10)
-                        .padding([.top],5)
+                        .padding([.top],5)*/
                     
                     Spacer()
                 }

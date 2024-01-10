@@ -59,75 +59,112 @@ struct ProfileView: View {
                 .background(Color.white)
                 .padding([.horizontal],15)
                 .padding([.bottom],10)
-                HStack(spacing:185){
-                    NavigationLink("My Friends", destination: MyFriends())
-                        .foregroundColor(.black)
-                        .padding()
-                        .font(.system(size: 14, weight: .regular, design: .rounded))
-                    Image(systemName: "chevron.forward")
-                }   .frame(maxWidth: .infinity,alignment: .leading)
-                    .background(
-                        Color.white
-                            .cornerRadius(20))
-                    .padding([.horizontal],15)
-                    .padding([.bottom],10)
-                    .padding([.top],5)
                 
-                HStack(spacing:165){
-                    NavigationLink("Places Visited", destination: PlacesVisited())
-                        .foregroundColor(.black)
-                        .padding()
-                        .font(.system(size: 14, weight: .regular, design: .rounded))
-                    Image(systemName: "chevron.forward")
-                }   .frame(maxWidth: .infinity,alignment: .leading)
-                    .background(
-                        Color.white
-                            .cornerRadius(20))
-                    .padding([.horizontal],15)
-                    .padding([.bottom],10)
-                    .padding([.top],5)
                 
-                HStack(spacing:180){
-                    NavigationLink("My Reviews", destination: MyReviews())
-                        .foregroundColor(.black)
-                        .padding()
-                        .font(.system(size: 14, weight: .regular, design: .rounded))
-                    Image(systemName: "chevron.forward")
-                }   .frame(maxWidth: .infinity,alignment: .leading)
-                    .background(
-                        Color.white
-                            .cornerRadius(20))
-                    .padding([.horizontal],15)
-                    .padding([.bottom],10)
-                    .padding([.top],5)
                 
-                HStack(spacing:155){
-                    NavigationLink("Add Restaurant", destination: AddRestaurant())
-                        .foregroundColor(.black)
-                        .padding()
-                        .font(.system(size: 14, weight: .regular, design: .rounded))
-                    Image(systemName: "chevron.forward")
-                }   .frame(maxWidth: .infinity,alignment: .leading)
-                    .background(
-                        Color.white
-                            .cornerRadius(20))
-                    .padding([.horizontal],15)
-                    .padding([.bottom],10)
-                    .padding([.top],5)
+                NavigationLink {
+                    MyFriends().navigationBarBackButtonHidden(false)
+                } label: {
+                    HStack(spacing:185)
+                    {
+                        Text("My Friends")
+                            .foregroundColor(.black)
+                            .padding()
+                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                        
+                        Image(systemName: "chevron.forward")
+                            .foregroundColor(.black)
+                    }   
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                        .background(
+                            Color.white
+                                .cornerRadius(20))
+                        .padding([.horizontal],15)
+                        .padding([.bottom],10)
+                        .padding([.top],5)
                 
-                HStack(spacing:180){
-                    NavigationLink("Add Foodie", destination: AddFoodie())
-                        .foregroundColor(.black)
-                        .padding()
-                        .font(.system(size: 14, weight: .regular, design: .rounded))
-                    Image(systemName: "chevron.forward")
-                }   .frame(maxWidth: .infinity,alignment: .leading)
-                    .background(
-                        Color.white
-                            .cornerRadius(20))
-                    .padding([.horizontal],15)
-                    .padding([.bottom],30)
-                    .padding([.top],5)
+                }
+                
+                
+                NavigationLink {
+                    PlacesVisited().navigationBarBackButtonHidden(false)
+                } label: {
+                    HStack(spacing:165){
+                        Text("Places Visited")                            .foregroundColor(.black)
+                            .padding()
+                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                        Image(systemName: "chevron.forward")
+                            .foregroundColor(.black)
+                    }   .frame(maxWidth: .infinity,alignment: .leading)
+                        .background(
+                            Color.white
+                                .cornerRadius(20))
+                        .padding([.horizontal],15)
+                        .padding([.bottom],10)
+                        .padding([.top],5)
+                
+                }
+                
+                NavigationLink {
+                    MyReviews().navigationBarBackButtonHidden(false)
+                } label: {
+                    HStack(spacing:180){
+                        Text("My Reviews")                            .foregroundColor(.black)
+                            .padding()
+                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                        Image(systemName: "chevron.forward")
+                            .foregroundColor(.black)
+                    }   .frame(maxWidth: .infinity,alignment: .leading)
+                        .background(
+                            Color.white
+                                .cornerRadius(20))
+                        .padding([.horizontal],15)
+                        .padding([.bottom],10)
+                        .padding([.top],5)
+                
+                }
+                
+                
+                
+                NavigationLink {
+                    AddRestaurant().navigationBarBackButtonHidden(false)
+                } label: {
+                    HStack(spacing:155){
+                        Text("Add Restaurant")                            .foregroundColor(.black)
+                            .padding()
+                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                        Image(systemName: "chevron.forward")
+                            .foregroundColor(.black)
+                    }   .frame(maxWidth: .infinity,alignment: .leading)
+                        .background(
+                            Color.white
+                                .cornerRadius(20))
+                        .padding([.horizontal],15)
+                        .padding([.bottom],10)
+                        .padding([.top],5)
+                
+                }
+                
+                
+                NavigationLink {
+                    AddFoodie().navigationBarBackButtonHidden(false)
+                } label: {
+                    HStack(spacing:180){
+                        Text("Add Foodie")                            .foregroundColor(.black)
+                            .padding()
+                            .font(.system(size: 14, weight: .regular, design: .rounded))
+                        Image(systemName: "chevron.forward")
+                            .foregroundColor(.black)
+                    }   .frame(maxWidth: .infinity,alignment: .leading)
+                        .background(
+                            Color.white
+                                .cornerRadius(20))
+                        .padding([.horizontal],15)
+                        .padding([.bottom],30)
+                        .padding([.top],5)
+                
+                }
+                
                 
                 
                 Spacer()

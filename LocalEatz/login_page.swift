@@ -50,14 +50,21 @@ struct login_page: View {
                             .padding([.leading,.bottom],30)
                             .foregroundColor(.orange)
                         
-                        NavigationLink("Login", destination: ProfileView().navigationBarBackButtonHidden(true))
-                            .font(.system(size: 24, weight: .bold, design: .rounded))
-                            .foregroundColor(Color.white)
-                            .padding(15)
-                            .padding(.horizontal,80)
-                            .background(
-                                Color("orange")
-                                    .cornerRadius(20))
+                        
+                        NavigationLink {
+                            ProfileView().navigationBarBackButtonHidden(true)
+                        } label: {
+                            Text("Login")
+                            
+                                .font(.system(size: 24, weight: .bold, design: .rounded))
+                                .foregroundColor(Color.white)
+                                .padding(15)
+                                .padding(.horizontal,80)
+                                .background(
+                                    Color("orange")
+                                        .cornerRadius(20))
+
+                        }
                         NavigationLink("New to LocalEatz? Sign-up", destination: signup_page().navigationBarBackButtonHidden(true))
                             .foregroundColor(.orange)
                         Spacer()

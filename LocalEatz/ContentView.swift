@@ -19,7 +19,7 @@ struct ContentView: View {
                         Text("Home")
                     }
                 
-                RestaurantRecommendation()
+
                     .tabItem {
                         Image(systemName: "fork.knife")
                         Text("Near Me")
