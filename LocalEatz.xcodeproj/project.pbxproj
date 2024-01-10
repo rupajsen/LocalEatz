@@ -28,6 +28,7 @@
 		3FDEE7A42B407ABC003D9275 /* MyReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE7A32B407ABC003D9275 /* MyReviews.swift */; };
 		3FDEE7A72B4087D5003D9275 /* MyFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE7A62B4087D5003D9275 /* MyFriends.swift */; };
 		7FA2A8632B4E5C0C00C450A6 /* RestaurantRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */; };
+		7FA2A8672B4E9D1D00C450A6 /* PlannedTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2A8662B4E9D1D00C450A6 /* PlannedTrips.swift */; };
 		A14227B92B4E723F0000EE4F /* IntroductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14227B82B4E723F0000EE4F /* IntroductionData.swift */; };
 		A1FF98012B4594E400CDDAAE /* AddFoodie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF98002B4594E400CDDAAE /* AddFoodie.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		3FDEE7A32B407ABC003D9275 /* MyReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviews.swift; sourceTree = "<group>"; };
 		3FDEE7A62B4087D5003D9275 /* MyFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriends.swift; sourceTree = "<group>"; };
 		7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRecommendation.swift; sourceTree = "<group>"; };
+		7FA2A8662B4E9D1D00C450A6 /* PlannedTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedTrips.swift; sourceTree = "<group>"; };
 		A14227B82B4E723F0000EE4F /* IntroductionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionData.swift; sourceTree = "<group>"; };
 		A1FF98002B4594E400CDDAAE /* AddFoodie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 				3F6D71152B348C9900135C37 /* ReviewView.swift */,
 				3F05301B2B32CCC900396656 /* ReviewSubView.swift */,
 				3F0E15912B2E1FA1001A3BBB /* MapView.swift */,
+				7FA2A8662B4E9D1D00C450A6 /* PlannedTrips.swift */,
 				3F0E15932B2E2CE3001A3BBB /* ItineraryView.swift */,
 				3F6D71112B3484EC00135C37 /* ItineraryView2.swift */,
 				3FDEE7A52B407CAE003D9275 /* Profile */,
@@ -227,6 +230,7 @@
 				3F3B1E242B3C7ED100FE49E7 /* HomeView.swift in Sources */,
 				3F6D71142B348C7200135C37 /* AboutView.swift in Sources */,
 				3F0E15922B2E1FA1001A3BBB /* MapView.swift in Sources */,
+				7FA2A8672B4E9D1D00C450A6 /* PlannedTrips.swift in Sources */,
 				3F05301A2B31A5A400396656 /* ProfileView.swift in Sources */,
 				3F05301C2B32CCC900396656 /* ReviewSubView.swift in Sources */,
 				3F16424B2B4A97B4000BB5B3 /* signup_page.swift in Sources */,
@@ -364,7 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LocalEatz/Preview Content\"";
-				DEVELOPMENT_TEAM = M86WV5Z73X;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
@@ -398,7 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LocalEatz/Preview Content\"";
-				DEVELOPMENT_TEAM = M86WV5Z73X;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";

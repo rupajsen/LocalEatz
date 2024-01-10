@@ -25,15 +25,16 @@ struct ItineraryView: View {
     @State private var dates: Set<DateComponents> = []
     
     var body: some View {
+       // NavigationView{
             VStack{
-                ZStack {
-                    
-                    
-                    Text("Itinerary Planner")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
+//                ZStack {
+//                    
+//                    
+//                    Text("Itinerary Planner")
+//                        .font(.title2)
+//                        .fontWeight(.bold)
+//                }
+//                .frame(maxWidth: .infinity, alignment: .center)
                 
                 ScrollView{
                     
@@ -111,28 +112,31 @@ struct ItineraryView: View {
                             .background(Color("orange")
                                 .cornerRadius(25))
                             .padding(.bottom)
-
+                        
                     }
                     
                     /*HStack{
-                        NavigationLink("Get Itinerary", destination: ItineraryView2())
-                            .font(.system(size: 24, weight: .regular, design: .rounded))
-                            .padding()
-                            .foregroundColor(.white)
-                    }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .center)
-                        .background(
-                            Color("orange")
-                                .cornerRadius(20))
-                        .padding([.horizontal],15)
-                        .padding([.bottom],10)
-                        .padding([.top],5)*/
+                     NavigationLink("Get Itinerary", destination: ItineraryView2())
+                     .font(.system(size: 24, weight: .regular, design: .rounded))
+                     .padding()
+                     .foregroundColor(.white)
+                     }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .center)
+                     .background(
+                     Color("orange")
+                     .cornerRadius(20))
+                     .padding([.horizontal],15)
+                     .padding([.bottom],10)
+                     .padding([.top],5)*/
                     
                     Spacer()
                 }
                 
             }
             .background(Color("backgroundColor"))
-        
+            
+        //}
+        //.navigationTitle("Itinerary Planner")
+        //.navigationBarTitleDisplayMode(.automatic)
     }
 }
 

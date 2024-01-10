@@ -48,7 +48,7 @@ struct signup_page: View {
                         
                         
                         NavigationLink {
-                            ProfileView().navigationBarBackButtonHidden(true)
+                            ProfileView().navigationBarBackButtonHidden(false)
                         } label: {
                             Text("Sign-up")
                                 .font(.system(size: 24, weight: .bold, design: .rounded))

@@ -25,7 +25,7 @@ struct ContentView: View {
                         Text("Near Me")
                     }
                 
-                ItineraryView()
+                PlannedTrips()
                     .tabItem {
                         Image(systemName: "map")
                         Text("Itinerary")
