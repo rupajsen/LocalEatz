@@ -28,6 +28,7 @@
 		3FDEE7A42B407ABC003D9275 /* MyReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE7A32B407ABC003D9275 /* MyReviews.swift */; };
 		3FDEE7A72B4087D5003D9275 /* MyFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE7A62B4087D5003D9275 /* MyFriends.swift */; };
 		7FA2A8632B4E5C0C00C450A6 /* RestaurantRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */; };
+		A14227B92B4E723F0000EE4F /* IntroductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14227B82B4E723F0000EE4F /* IntroductionData.swift */; };
 		A1FF98012B4594E400CDDAAE /* AddFoodie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF98002B4594E400CDDAAE /* AddFoodie.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		3FDEE7A32B407ABC003D9275 /* MyReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviews.swift; sourceTree = "<group>"; };
 		3FDEE7A62B4087D5003D9275 /* MyFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriends.swift; sourceTree = "<group>"; };
 		7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRecommendation.swift; sourceTree = "<group>"; };
+		A14227B82B4E723F0000EE4F /* IntroductionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionData.swift; sourceTree = "<group>"; };
 		A1FF98002B4594E400CDDAAE /* AddFoodie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 		3F0E157E2B2DFD42001A3BBB /* LocalEatz */ = {
 			isa = PBXGroup;
 			children = (
+				A14227B72B4E72120000EE4F /* Model */,
 				3F0E157F2B2DFD42001A3BBB /* MapViewApp.swift */,
 				3FD4A9992B30B5B900380DEC /* FirstScreen.swift */,
 				3F0E15812B2DFD42001A3BBB /* ContentView.swift */,
@@ -127,6 +130,14 @@
 				A1FF98002B4594E400CDDAAE /* AddFoodie.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		A14227B72B4E72120000EE4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A14227B82B4E723F0000EE4F /* IntroductionData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FDEE7A72B4087D5003D9275 /* MyFriends.swift in Sources */,
+				A14227B92B4E723F0000EE4F /* IntroductionData.swift in Sources */,
 				A1FF98012B4594E400CDDAAE /* AddFoodie.swift in Sources */,
 				3F16424A2B4A97B4000BB5B3 /* login_page.swift in Sources */,
 				3F6D71162B348C9900135C37 /* ReviewView.swift in Sources */,

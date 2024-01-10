@@ -53,7 +53,7 @@ struct AboutView: View {
                     
                     
                     NavigationLink {
-                        ReviewSubView().navigationBarBackButtonHidden(true)
+                        ReviewSubView().navigationBarBackButtonHidden(false)
                     } label: {
                         Text("Add Review")
                             .font(.system(size: 20, weight: .regular, design: .rounded))
