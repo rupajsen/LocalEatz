@@ -12,29 +12,29 @@ struct RestaurantRecommendation: View {
     var body: some View {
         NavigationView
         {
-            ScrollView{
-                VStack
+            
+            VStack
+            {
+                HStack(spacing:40)
                 {
-                    HStack(spacing:40)
-                    {
-                       /* Image(systemName: "line.3.horizontal")
+                    /* Image(systemName: "line.3.horizontal")
+                     .resizable()
+                     .frame(width:20,height:20)*/
+                    Text("Chandigarh,Punjab")
+                        .font(.system(size: 22, weight: .semibold, design: .rounded))
+                        .foregroundColor(.orange)
+                        .padding(.leading,40)
+                        .padding(.trailing)
+                    NavigationLink(destination: login_page()) {
+                        Image(systemName: "person.crop.circle")
                             .resizable()
-                            .frame(width:20,height:20)*/
-                        Text("Chandigarh,Punjab")
-                            .font(.system(size: 22, weight: .semibold, design: .rounded))
-                            .foregroundColor(.orange)
-                            .padding(.leading,40)
-                            .padding(.trailing)
-                        NavigationLink(destination: login_page()) {
-                            Image(systemName: "person.crop.circle")
-                                .resizable()
-                                .frame(width:36,height:36)
-                                .foregroundColor(.black)
-                        }
+                            .frame(width:36,height:36)
+                            .foregroundColor(.black)
                     }
-                    .padding(.bottom)
-                        
-                    
+                }
+                .padding(.bottom)
+                
+                ScrollView{
                     VStack
                     {
                         HStack{
@@ -165,7 +165,7 @@ struct RestaurantRecommendation: View {
                             
                         }.padding(.bottom,20).padding(.horizontal,20)
                     }
-                }
+                
                 
                 VStack
                 {
@@ -236,6 +236,7 @@ struct RestaurantRecommendation: View {
                 }
                 
             }
+        }
             .frame(maxWidth: .infinity,maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .background(Color("backgroundColor"))
         }
