@@ -34,6 +34,7 @@ struct ProfileView: View {
                     NavigationLink("Edit", destination: EditProfile())
                         .foregroundColor(.orange)
                         .font(.system(size: 15))
+                    
                 }.frame(maxWidth: .infinity,alignment: .leading)
                     .padding([.horizontal],15)
                 HStack{
@@ -56,7 +57,8 @@ struct ProfileView: View {
                     }.padding([.trailing],10)
                 }
                 .frame(maxWidth: .infinity,alignment: .leading)
-                .background(Color.white)
+                .background(Color.white
+                    .cornerRadius(12))
                 .padding([.horizontal],15)
                 .padding([.bottom],10)
                 
