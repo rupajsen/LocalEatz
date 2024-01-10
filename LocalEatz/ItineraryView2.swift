@@ -9,23 +9,24 @@ import SwiftUI
 
 struct ItineraryView2: View {
     var body: some View {
+        NavigationView{
             VStack
             {
-                HStack(spacing:40)
-                {
-                   /* Image(systemName: "line.3.horizontal")
-                        .resizable()
-                        .frame(width:20,height:20)*/
-                    Text("Chandigarh,Punjab")
-                        .font(.system(size: 22, weight: .semibold, design: .rounded))
-                        .foregroundColor(.orange)
-                        .padding(.leading,40)
-                        .padding(.trailing)
-                    Image("profileImage")
-                        .resizable()
-                        .frame(width:64,height:64)
-                }
-                .padding(.bottom,30)
+//                HStack(spacing:40)
+//                {
+//                    /* Image(systemName: "line.3.horizontal")
+//                     .resizable()
+//                     .frame(width:20,height:20)*/
+//                    Text("Chandigarh,Punjab")
+//                        .font(.system(size: 22, weight: .semibold, design: .rounded))
+//                        .foregroundColor(.orange)
+//                        .padding(.leading,40)
+//                        .padding(.trailing)
+//                    Image("profileImage")
+//                        .resizable()
+//                        .frame(width:64,height:64)
+//                }
+//                .padding(.bottom,30)
                 
                 ScrollView{
                     
@@ -294,8 +295,12 @@ struct ItineraryView2: View {
             }
             .frame(maxWidth: .infinity,maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .background(Color("backgroundColor"))
+          
         }
+        .navigationTitle("Itinerary")
+        .navigationBarTitleDisplayMode(.inline)
     }
+}
 
 
 #Preview {

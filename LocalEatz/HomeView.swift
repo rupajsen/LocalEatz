@@ -24,11 +24,15 @@ struct HomeView: View {
                             .foregroundColor(.orange)
                             .padding(.leading,40)
                             .padding(.trailing)
-                        Image("profileImage")
-                            .resizable()
-                            .frame(width:64,height:64)
+                        NavigationLink(destination: ProfileView()) {
+                            Image(systemName: "person.crop.circle")
+                                .resizable()
+                                .frame(width:36,height:36)
+                                .foregroundColor(.black)
+                        }
                     }
-                    .padding(.bottom,30)
+                    .padding(.bottom)
+                        
                     
 
                     HStack{
@@ -265,7 +269,7 @@ struct HomeView: View {
             }
             .frame(maxWidth: .infinity,maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .background(Color("backgroundColor"))
-        }     
+        }
     }
 }
 
