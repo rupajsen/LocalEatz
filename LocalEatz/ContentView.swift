@@ -8,12 +8,63 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = "One"
     var body: some View {
-        NavigationView{
+       // NavigationView{
             
-            TabView{
+        TabView(selection: $selectedTab){
                 
-                HomeView()
+            
+            NavigationView {
+                VStack
+                {
+                    HomeView()
+                }
+                
+            }
+            .padding(.top,-30)
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
+            .tag("One")
+            
+            NavigationView {
+                VStack
+                {
+                    RestaurantRecommendation()
+                }
+                
+            }
+            .tabItem {
+                Label("Near Me", systemImage: "fork.knife")
+            }
+            .tag("two")
+            
+            NavigationView {
+                VStack
+                {
+                    PlannedTrips()
+                }
+                
+            }
+            .tabItem {
+                Label("Itinerary", systemImage: "map")
+            }
+            .tag("three")
+            
+            NavigationView {
+                VStack
+                {
+                    MapView()
+                }
+                
+            }
+            .tabItem {
+                Label("Foodie Map", systemImage: "mappin.and.ellipse")
+            }
+            .tag("four")
+            
+                /*HomeView()
                     .tabItem{
                         Image(systemName: "house")
                         Text("Home")
@@ -35,9 +86,9 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "mappin.and.ellipse")
                         Text("Foodie Map")
-                    }
+                    }*/
             }
-        }
+       // }
     }
 }
 

@@ -135,7 +135,7 @@ struct ItineraryView: View {
             .background(Color("backgroundColor"))
             
         //}
-        //.navigationTitle("Itinerary Planner")
+       // .navigationTitle("Itinerary Planner")
         //.navigationBarTitleDisplayMode(.automatic)
     }
 }
