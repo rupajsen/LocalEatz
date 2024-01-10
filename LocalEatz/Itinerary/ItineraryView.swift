@@ -25,7 +25,7 @@ struct ItineraryView: View {
     @State private var dates: Set<DateComponents> = []
     
     var body: some View {
-       // NavigationView{
+        NavigationStack{
             VStack{
 //                ZStack {
 //                    
@@ -134,9 +134,9 @@ struct ItineraryView: View {
             }
             .background(Color("backgroundColor"))
             
-        //}
-       // .navigationTitle("Itinerary Planner")
-        //.navigationBarTitleDisplayMode(.automatic)
+        }
+        .navigationTitle("Itinerary Planner")
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 

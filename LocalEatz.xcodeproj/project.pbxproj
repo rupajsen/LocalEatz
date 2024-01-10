@@ -136,8 +136,8 @@
 		7FA2A8682B4EAEB500C450A6 /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
-				3F0E15932B2E2CE3001A3BBB /* ItineraryView.swift */,
 				7FA2A8662B4E9D1D00C450A6 /* PlannedTrips.swift */,
+				3F0E15932B2E2CE3001A3BBB /* ItineraryView.swift */,
 				3F6D71112B3484EC00135C37 /* ItineraryView2.swift */,
 			);
 			path = Itinerary;

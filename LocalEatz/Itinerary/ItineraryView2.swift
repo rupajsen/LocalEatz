@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItineraryView2: View {
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack
             {
 //                HStack(spacing:40)

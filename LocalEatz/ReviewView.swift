@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ReviewView: View {
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ScrollView(.vertical,showsIndicators: false)
             {
                 VStack{
