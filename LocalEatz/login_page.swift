@@ -63,7 +63,6 @@ struct login_page: View {
                                 .background(
                                     Color("orange")
                                         .cornerRadius(20))
-
                         }
                         NavigationLink("New to LocalEatz? Sign-up", destination: signup_page().navigationBarBackButtonHidden(true))
                             .foregroundColor(.orange)

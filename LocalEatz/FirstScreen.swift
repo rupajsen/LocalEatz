@@ -16,7 +16,7 @@ struct FirstScreen: View {
                     .padding([.leading])
                     //.padding([.bottom],20)
                 Text("LocalEatz")
-                    .font(.system(size: 64, weight: .bold, design: .rounded))
+                    .font(.system(size: 64, weight: .bold, design: .default))
                     .foregroundColor(.white)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
                     .padding([.leading])

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        NavigationView
-        {
+//        NavigationView
+//        {
             VStack{
                 ZStack {
                    /* HStack {
@@ -28,6 +28,7 @@ struct ProfileView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.bottom)
+                .padding(.top,-10)
                 
                 HStack(spacing:150){
                     Text("Personal Details")
@@ -65,7 +66,7 @@ struct ProfileView: View {
                 
                 
                 NavigationLink {
-                    MyFriends().navigationBarBackButtonHidden(false)
+                    MyFriends().navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing:185)
                     {
@@ -89,7 +90,7 @@ struct ProfileView: View {
                 
                 
                 NavigationLink {
-                    PlacesVisited().navigationBarBackButtonHidden(false)
+                    PlacesVisited().navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing:165){
                         Text("Places Visited")                            .foregroundColor(.black)
@@ -108,7 +109,7 @@ struct ProfileView: View {
                 }
                 
                 NavigationLink {
-                    MyReviews().navigationBarBackButtonHidden(false)
+                    MyReviews().navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing:180){
                         Text("My Reviews")                            .foregroundColor(.black)
@@ -129,7 +130,7 @@ struct ProfileView: View {
                 
                 
                 NavigationLink {
-                    AddRestaurant().navigationBarBackButtonHidden(false)
+                    AddRestaurant().navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing:155){
                         Text("Add Restaurant")                            .foregroundColor(.black)
@@ -149,7 +150,7 @@ struct ProfileView: View {
                 
                 
                 NavigationLink {
-                    AddFoodie().navigationBarBackButtonHidden(false)
+                    AddFoodie().navigationBarBackButtonHidden(true)
                 } label: {
                     HStack(spacing:180){
                         Text("Add Foodie")                            .foregroundColor(.black)
@@ -172,7 +173,7 @@ struct ProfileView: View {
                 Spacer()
             }.padding()
                 .background(Color("backgroundColor"))
-        }
+//        }
     }
 }
 
