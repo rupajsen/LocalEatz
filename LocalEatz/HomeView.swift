@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = false
     var body: some View {
         NavigationView
         {
@@ -356,6 +357,7 @@ struct HomeView: View {
                 .background(Color("backgroundColor"))
                 
             }
+        .fullScreenCover(isPresented: $shouldShowOnboarding, content: {FirstScreen()})
         
     }
 }

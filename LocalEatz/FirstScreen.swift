@@ -8,43 +8,38 @@
 import SwiftUI
 struct FirstScreen: View {
     var body: some View {
-        NavigationView{
+        NavigationView
+        {
+            TabView
+            {
+                pageView(imageName: "bell", title: "Random Bell",showDismissButton: false)
+                    .background(Color.red)
+
+                pageView(imageName: "airplane", title: "aerolane",showDismissButton: false)
+                    .background(Color.blue)
+                
+                pageView(imageName: "bookmark", title: "bookmark",showDismissButton: true)
+                    .background(Color.green)
+            }
+            .background(
+                Color.black.edgesIgnoringSafeArea(.all)
+                  )
+            .tabViewStyle(PageTabViewStyle())
+        }
+        
+
+        
+        /*NavigationView{
             VStack
             {
-                Image("icon")
+                /*Image("icon")
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment:.leading)
                     .padding([.leading])
-                    //.padding([.bottom],20)
                 Text("LocalEatz")
                     .font(.system(size: 64, weight: .bold, design: .default))
                     .foregroundColor(.white)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
                     .padding([.leading])
-                //.padding([.bottom],-3)
-                /*Text("the Eat!")
-                    .font(.system(size: 64, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                    .padding([.leading])*/
-                
-                    
-                    /*ScrollView(.horizontal)
-                    {
-                        HStack(spacing : 10)
-                        {
-                            Text("Hello World abcdef")
-                        }
-                        .padding()
-                        //.padding(.horizontal, 30)
-                        .frame(width: 300,height:450,alignment: .topLeading)//remove of shadow not required
-                        .background(Color.white)
-                        
-                        
-                    }
-                    .background(Color.blue)
-                    .padding([.leading,.trailing])
-                    //.frame(maxWidth: .infinity,alignment: .center)
-                    .scrollIndicators(.hidden)*/
                 
                 GeometryReader(content: { geometry in
                     let size = geometry.size
@@ -105,7 +100,7 @@ struct FirstScreen: View {
                         .background(
                             Color.white
                                 .cornerRadius(20))
-                }
+                }*/
                 
                 Spacer()
             }
@@ -113,11 +108,61 @@ struct FirstScreen: View {
             {
                 Color("coreOrange")
                     .ignoresSafeArea()
-            }
+            }*/
         }
     }
+struct pageView : View{
+    let imageName : String
+    let title : String
+    let showDismissButton : Bool
     
-    @ViewBuilder
+    
+    var body: some View{
+        
+        VStack
+        {
+            
+            Image(systemName: imageName)
+                .resizable()
+                .frame(width:150,height: 150)
+                .padding()
+                
+            Text(title)
+            
+            if showDismissButton
+            {
+                
+                NavigationLink {
+                    ContentView().navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Get Started")
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.black)
+                        .padding(10)
+                        .padding(.horizontal,80)
+                        .background(
+                            Color.white
+                                .cornerRadius(20))
+                }
+                /*Button(action: {}, label: {
+                    Text("Get Started")
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.black)
+                        .padding(10)
+                        .padding(.horizontal,80)
+                        .background(
+                            Color.white
+                                .cornerRadius(20))
+                })*/
+            }
+            Spacer()
+            
+        }
+        .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .leading)
+    }
+}
+    
+    /*@ViewBuilder
     func OverlayView(_ card: IntroductionData) -> some View
     {
         ZStack(alignment: .bottomLeading, content: {
@@ -144,8 +189,9 @@ struct FirstScreen: View {
             })
             .padding(20)
         })
-    }
-}
+    }*/
+
+
 #Preview {
     FirstScreen()
 }
