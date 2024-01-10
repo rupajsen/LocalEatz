@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State private var showingEditProfile:Bool = false
+    
     var body: some View {
 //        NavigationView
 //        {
@@ -32,7 +35,15 @@ struct ProfileView: View {
                 
                 HStack(spacing:150){
                     Text("Personal Details")
-                    NavigationLink("Edit", destination: EditProfile())
+                    Button("Edit"){
+                                    showingEditProfile.toggle()
+                                }
+                                    .sheet(isPresented: $showingEditProfile) {
+                                        print("Sheet dismissed!")
+                                    } content: {
+                                        EditProfile()
+                                            .presentationDragIndicator(.visible)
+                                    }
                         .foregroundColor(.orange)
                         .font(.system(size: 15))
                     

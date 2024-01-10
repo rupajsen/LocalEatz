@@ -22,15 +22,15 @@ struct EditProfile: View {
     var body: some View {
         NavigationView{
             VStack {
-//                ZStack {
-//                    
-//                    
-//                    Text("Account")
-//                        .font(.title2)
-//                        .fontWeight(.bold)
-//                }
-//                .frame(maxWidth: .infinity, alignment: .center)
-//                .padding()
+                ZStack {
+                    
+                    
+                    Text("Account")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding()
                 
                 Image("profileImage")
                     .frame(width: 100,height: 100)
