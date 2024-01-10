@@ -9,44 +9,84 @@ import Foundation
 import SwiftUI
 
 struct RestaurantRecommendation: View {
+    @State private var searchItem = ""
+    
     var body: some View {
-        NavigationView
+        NavigationStack
         {
-            
             VStack
             {
-                HStack(spacing:40)
+                ScrollView(.horizontal,showsIndicators: false)
                 {
-                    /* Image(systemName: "line.3.horizontal")
-                     .resizable()
-                     .frame(width:20,height:20)*/
-                    Text("Chandigarh,Punjab")
-                        .font(.system(size: 22, weight: .semibold, design: .rounded))
-                        .foregroundColor(.orange)
-                        .padding(.leading,40)
-                        .padding(.trailing)
-                    NavigationLink(destination: login_page()) {
-                        Image(systemName: "person.crop.circle")
-                            .resizable()
-                            .frame(width:36,height:36)
-                            .foregroundColor(.black)
+                    HStack
+                    {
+                        HStack {
+                            HStack {
+                                Image(systemName: "line.3.horizontal.decrease.circle")
+                                Text("Filters")
+                            }
+                                    .font(.system(size: 15, weight: .thin, design: .rounded))
+                                    .padding(6)
+                                    .background(Color.white)
+                                    .cornerRadius(5)
+
+                            
+                            HStack {
+                                Image(systemName: "dot.square")
+                                    .foregroundColor(.green)
+                                Text("Veg")
+                            }
+                                    .font(.system(size: 15, weight: .thin, design: .rounded))
+                                    .padding(6)
+                                    .background(Color.white)
+                                    .cornerRadius(5)
+                            
+                            HStack {
+                                Image(systemName: "dot.square")
+                                    .foregroundColor(.red)
+                                Text("Non-Veg")
+                            }
+                                    .font(.system(size: 15, weight: .thin, design: .rounded))
+                                    .padding(6)
+                                    .background(Color.white)
+                                    .cornerRadius(5)
+                            
+                            HStack {
+                                Image(systemName: "map")
+                                    .foregroundColor(.blue)
+                                Text("Nearest")
+                            }
+                                    .font(.system(size: 15, weight: .thin, design: .rounded))
+                                    .padding(6)
+                                    .background(Color.white)
+                                    .cornerRadius(5)
+                            
+                            HStack {
+                                Image(systemName: "star")
+                                    .foregroundColor(.orange)
+                                Text("Rating")
+                            }
+                                    .font(.system(size: 15, weight: .thin, design: .rounded))
+                                    .padding(6)
+                                    .background(Color.white)
+                                    .cornerRadius(5)
+                            
+                        }
                     }
+                    .padding(.leading)
                 }
-                .padding(.bottom)
+                
                 
                 ScrollView{
                     VStack
                     {
                         HStack{
-                            Text("Local Popular Food Places")
+                            Text("Restaurants Recommended")
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                .padding()
                                 .font(.system(size: 20, weight: .semibold, design: .rounded))
-                            Text("View All")
-                                .foregroundColor(.orange)
-                                .font(.system(size: 15))
+            
                         }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                            .padding([.horizontal],15)
+                            .padding()
                         
                         
                         ScrollView(.horizontal,showsIndicators: false)
@@ -240,6 +280,7 @@ struct RestaurantRecommendation: View {
             .frame(maxWidth: .infinity,maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .background(Color("backgroundColor"))
         }
+        .searchable(text: $searchItem, prompt: "Find for food or restaurant...")
     }
 }
 

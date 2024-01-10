@@ -16,9 +16,6 @@ struct HomeView: View {
             {
                 HStack(spacing:40)
                 {
-                    /* Image(systemName: "line.3.horizontal")
-                     .resizable()
-                     .frame(width:20,height:20)*/
                     Text("Chandigarh,Punjab")
                         .font(.system(size: 22, weight: .semibold, design: .rounded))
                         .foregroundColor(.orange)
