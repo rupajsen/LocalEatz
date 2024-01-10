@@ -56,7 +56,7 @@ struct signup_page: View {
                                 .padding(15)
                                 .padding(.horizontal,80)
                                 .background(
-                                    Color("Orange")
+                                    Color("coreOrange")
                                         .cornerRadius(20))
 
                         }

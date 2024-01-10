@@ -87,7 +87,7 @@ struct ReviewSubView: View {
                         .foregroundColor(.white)
                 }.frame(maxWidth: .infinity,alignment: .center)
                     .background(
-                        Color("Orange")
+                        Color("coreOrange")
                             .cornerRadius(20))
                     .padding([.horizontal],15)
                     .padding([.bottom],10)

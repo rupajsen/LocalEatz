@@ -79,7 +79,7 @@ struct AboutView: View {
                         .padding(15)
                         .padding(.horizontal,90)
                         .foregroundColor(.white)
-                        .background(Color("Orange")
+                        .background(Color("coreOrange")
                             .cornerRadius(25))
                         .padding(.bottom)
 
