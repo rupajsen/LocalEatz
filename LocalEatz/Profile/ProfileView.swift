@@ -12,22 +12,22 @@ struct ProfileView: View {
         NavigationView
         {
             VStack{
-//                ZStack {
-//                   /* HStack {
-//                        Image(systemName: "line.3.horizontal")
-//                            .resizable()
-//                            .padding()
-//                            .frame(width: 50, height: 50)
-//                        
-//                        Spacer()
-//                    }*/
-//                    
-//                    Text("My Profile")
-//                        .font(.title2)
-//                        .fontWeight(.bold)
-//                }
-//                .frame(maxWidth: .infinity, alignment: .center)
-//                .padding(.bottom)
+                ZStack {
+                   /* HStack {
+                        Image(systemName: "line.3.horizontal")
+                            .resizable()
+                            .padding()
+                            .frame(width: 50, height: 50)
+                        
+                        Spacer()
+                    }*/
+                    
+                    Text("My Profile")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.bottom)
                 
                 HStack(spacing:150){
                     Text("Personal Details")
@@ -170,9 +170,7 @@ struct ProfileView: View {
                 Spacer()
             }.padding()
                 .background(Color("backgroundColor"))
-        }  
-        .navigationTitle("My Profile")
-        .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
