@@ -29,14 +29,21 @@ struct FirstScreen: View {
                 Image("introImage")
                     .padding([.top],5)
                     .padding(.bottom)
-                NavigationLink("Get Started", destination: ContentView().navigationBarBackButtonHidden(true))
-                    .font(.system(size: 28, weight: .bold, design: .rounded))
-                    .foregroundColor(Color.black)
-                    .padding(10)
-                    .padding(.horizontal,80)
-                    .background(
-                        Color.white
-                            .cornerRadius(20))
+                
+                
+                NavigationLink {
+                    ContentView().navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Get Started")
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.black)
+                        .padding(10)
+                        .padding(.horizontal,80)
+                        .background(
+                            Color.white
+                                .cornerRadius(20))
+                }
+                
                 Spacer()
             }
             .background
