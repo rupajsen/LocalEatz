@@ -77,8 +77,6 @@ struct EditProfile: View {
             
             
         }
-        .navigationTitle("Account")
-        .navigationBarTitleDisplayMode(.automatic)
     }
         
 }
