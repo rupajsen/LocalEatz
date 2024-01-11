@@ -35,11 +35,14 @@ struct ProfileView: View {
                 
                 HStack(spacing:150){
                     Text("Personal Details")
+                    
+                    
+
                     Button("Edit"){
                                     showingEditProfile.toggle()
                                 }
                                     .sheet(isPresented: $showingEditProfile) {
-                                        print("Sheet dismissed!")
+                                       // print("Sheet dismissed!")
                                     } content: {
                                         EditProfile()
                                             .presentationDragIndicator(.visible)
@@ -48,7 +51,9 @@ struct ProfileView: View {
                         .font(.system(size: 15))
                     
                 }.frame(maxWidth: .infinity,alignment: .leading)
-                    .padding([.horizontal],15)
+                    .padding([.horizontal],30)
+                
+                
                 HStack{
                     Image("profileImage")
                     VStack{
