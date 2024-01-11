@@ -9,14 +9,14 @@ import SwiftUI
 
 struct upcomingTrips: View {
     var body: some View {
-        NavigationStack
+        NavigationView
         {
             ScrollView(.vertical)
             {
-                Text("Upcoming Trips")
-                    .font(.system(size: 28, weight: .bold, design: .rounded))
-                    .frame(maxWidth: .infinity,alignment: .center)
-                    .padding(.bottom,20)
+//                Text("Upcoming Trips")
+//                    .font(.system(size: 28, weight: .bold, design: .rounded))
+//                    .frame(maxWidth: .infinity,alignment: .center)
+//                    .padding(.bottom,20)
                 VStack
                 {
                         HStack {
@@ -56,9 +56,10 @@ struct upcomingTrips: View {
             }
             
             .frame(maxWidth: .infinity,maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            .padding(.top,-80)
+           // .padding(.top,-80)
             .background(Color("backgroundColor"))
-            //.navigationTitle("Upcoming Trips")
+            .navigationTitle("Upcoming Trips")
+        .navigationBarTitleDisplayMode(.inline)
         }
         
         

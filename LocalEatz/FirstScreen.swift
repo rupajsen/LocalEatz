@@ -148,7 +148,7 @@ struct pageView : View{
             .padding(.bottom,30)
             
             Text(title)
-                .font(.system(size: 36, weight: .heavy, design: .rounded))
+                .font(.system(size: 32, weight: .medium, design: .rounded))
                 .foregroundStyle(.white)
                 .multilineTextAlignment(.center)
                 .padding([.leading,.trailing],15)
