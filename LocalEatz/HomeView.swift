@@ -73,11 +73,22 @@ struct HomeView: View {
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
                                 .padding()
                                 .font(.system(size: 20, weight: .semibold, design: .rounded))
-                            Text("View All")
+                            
+                            NavigationLink {
+                                upcomingTrips()
+                            } label: {
+                                Text("View All")
+                                    .foregroundColor(.orange)
+                                    .font(.system(size: 15))
+                                    //.padding(.leading,-70)
+                            }
+                            
+                            /*Text("View All")
                                 .foregroundColor(.orange)
-                                .font(.system(size: 15))
+                                .font(.system(size: 15))*/
                         }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
                             .padding([.horizontal],15)
+                            .padding(.bottom,-10)
                         
                         ScrollView(.horizontal,showsIndicators: false)
                         {

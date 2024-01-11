@@ -15,17 +15,20 @@ struct FirstScreen: View {
                 pageView(imageName: "introductoryImage1", title: "Local Popular Dishes that make you droll",showDismissButton: false)
                     .background(Color("coreOrange"))
 
-                pageView(imageName: "airplane", title: "aerolane",showDismissButton: false)
-                    .background(Color.blue)
+                pageView(imageName: "introductoryImage2", title: "Plan your food explorations!",showDismissButton: false)
+                    .background(Color("coreOrange"))
                 
-                pageView(imageName: "bookmark", title: "bookmark",showDismissButton: true)
-                    .background(Color.green)
+                pageView(imageName: "introductoryImage3", title: "Local Popular Dishes that make you droll",showDismissButton: false)
+                    .background(Color("coreOrange"))
+                
+                pageView(imageName: "introductoryImage4", title: "Find Local Popular Food Outlets",showDismissButton: true)
+                    .background(Color("coreOrange"))
             }
             .background(
                 Color("coreOrange").edgesIgnoringSafeArea(.all)
                   )
             .tabViewStyle(PageTabViewStyle())
-        }
+        }.padding(.top,-10)
         
 
         
@@ -121,32 +124,39 @@ struct pageView : View{
         
         VStack
         {
-            HStack
+            HStack(spacing:10)
             {
                 Image("logo")
                 VStack
                 {
                     Text("LocalEatz")
-                        .font(.system(size: 24, weight: .bold, design: .rounded))
+                        .font(.system(size: 36, weight: .bold, design: .rounded))
                         .foregroundStyle(.white)
                     Divider()
-                        .frame(width:150,height:3)
+                        .frame(width:160,height:3)
                         .overlay(.white)
-                        .padding(.top,-10)
-                        //.padding(.bottom,-100)
+                        .padding(.top,-20)
                     Text("Find Local Treasures")
                         .foregroundStyle(.white)
                         .font(.system(size: 16, weight: .semibold, design: .rounded))
+                        .padding(.top,-20)
                     
                 }
-                .frame(width: .infinity,alignment: .leading)
             }
+            .frame(maxWidth: .infinity,alignment: .center)
+            .padding(.top,30)
+            .padding(.bottom,30)
+            
+            Text(title)
+                .font(.system(size: 36, weight: .heavy, design: .rounded))
+                .foregroundStyle(.white)
+                .multilineTextAlignment(.center)
+                .padding([.leading,.trailing],15)
+
             Image(imageName)
                 .resizable()
-                .frame(width:150,height: 150)
-                .padding()
-                
-            Text(title)
+                .frame(width:350,height: 350)
+            
             
             if showDismissButton
             {

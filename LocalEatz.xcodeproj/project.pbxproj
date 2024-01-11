@@ -29,6 +29,8 @@
 		3FDEE7A72B4087D5003D9275 /* MyFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE7A62B4087D5003D9275 /* MyFriends.swift */; };
 		7FA2A8632B4E5C0C00C450A6 /* RestaurantRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */; };
 		7FA2A8672B4E9D1D00C450A6 /* PlannedTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2A8662B4E9D1D00C450A6 /* PlannedTrips.swift */; };
+		A132F5372B4FD09800FD254B /* upcomingTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132F5362B4FD09800FD254B /* upcomingTrips.swift */; };
+		A132F5392B4FD55F00FD254B /* localfoodPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132F5382B4FD55F00FD254B /* localfoodPlaces.swift */; };
 		A14227B92B4E723F0000EE4F /* IntroductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14227B82B4E723F0000EE4F /* IntroductionData.swift */; };
 		A1FF98012B4594E400CDDAAE /* AddFoodie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF98002B4594E400CDDAAE /* AddFoodie.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		3FDEE7A62B4087D5003D9275 /* MyFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriends.swift; sourceTree = "<group>"; };
 		7FA2A8622B4E5C0C00C450A6 /* RestaurantRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRecommendation.swift; sourceTree = "<group>"; };
 		7FA2A8662B4E9D1D00C450A6 /* PlannedTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedTrips.swift; sourceTree = "<group>"; };
+		A132F5362B4FD09800FD254B /* upcomingTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upcomingTrips.swift; sourceTree = "<group>"; };
+		A132F5382B4FD55F00FD254B /* localfoodPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localfoodPlaces.swift; sourceTree = "<group>"; };
 		A14227B82B4E723F0000EE4F /* IntroductionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionData.swift; sourceTree = "<group>"; };
 		A1FF98002B4594E400CDDAAE /* AddFoodie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +95,7 @@
 		3F0E157E2B2DFD42001A3BBB /* LocalEatz */ = {
 			isa = PBXGroup;
 			children = (
+				A132F5352B4FD07100FD254B /* viewAll */,
 				A14227B72B4E72120000EE4F /* Model */,
 				3F0E157F2B2DFD42001A3BBB /* LocalEatzApp.swift */,
 				3FD4A9992B30B5B900380DEC /* FirstScreen.swift */,
@@ -141,6 +146,15 @@
 				3F6D71112B3484EC00135C37 /* ItineraryView2.swift */,
 			);
 			path = Itinerary;
+			sourceTree = "<group>";
+		};
+		A132F5352B4FD07100FD254B /* viewAll */ = {
+			isa = PBXGroup;
+			children = (
+				A132F5362B4FD09800FD254B /* upcomingTrips.swift */,
+				A132F5382B4FD55F00FD254B /* localfoodPlaces.swift */,
+			);
+			path = viewAll;
 			sourceTree = "<group>";
 		};
 		A14227B72B4E72120000EE4F /* Model */ = {
@@ -231,6 +245,8 @@
 				3F0E15802B2DFD42001A3BBB /* LocalEatzApp.swift in Sources */,
 				3FDEE7A42B407ABC003D9275 /* MyReviews.swift in Sources */,
 				3F0E15942B2E2CE3001A3BBB /* ItineraryView.swift in Sources */,
+				A132F5372B4FD09800FD254B /* upcomingTrips.swift in Sources */,
+				A132F5392B4FD55F00FD254B /* localfoodPlaces.swift in Sources */,
 				3FBB01D22B3DC68C00B18F04 /* AddRestaurant.swift in Sources */,
 				3F6D71122B3484EC00135C37 /* ItineraryView2.swift in Sources */,
 				7FA2A8632B4E5C0C00C450A6 /* RestaurantRecommendation.swift in Sources */,
