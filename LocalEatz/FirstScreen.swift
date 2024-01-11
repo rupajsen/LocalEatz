@@ -157,6 +157,7 @@ struct pageView : View{
             Image(imageName)
                 .resizable()
                 .frame(width:350,height: 350)
+                .padding(.bottom)
             
             
             if showDismissButton
@@ -164,14 +165,18 @@ struct pageView : View{
                 NavigationLink {
                     ContentView().navigationBarBackButtonHidden(true)
                 } label: {
-                    Text("Get Started")
-                        .font(.system(size: 28, weight: .bold, design: .rounded))
-                        .foregroundColor(Color.black)
-                       .padding(10)
-                       .padding(.horizontal,80)
-                       .background(
-                          Color.white
-                             .cornerRadius(20))
+                    Image(systemName: "arrow.right.circle")
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .frame(width:48,height:48)
+//                    Text("Get Started")
+//                        .font(.system(size: 28, weight: .bold, design: .rounded))
+//                        .foregroundColor(Color.black)
+//                       .padding(10)
+//                       .padding(.horizontal,80)
+//                       .background(
+//                          Color.white
+//                             .cornerRadius(20))
                 }
             }
             Spacer()
