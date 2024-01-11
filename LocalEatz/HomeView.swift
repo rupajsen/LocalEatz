@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = false
     var body: some View {
         NavigationView
         {
@@ -366,10 +365,7 @@ struct HomeView: View {
             }
                 .frame(maxWidth: .infinity,maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .background(Color("backgroundColor"))
-                
             }
-        .fullScreenCover(isPresented: $shouldShowOnboarding, content: {FirstScreen()})
-        
     }
 }
 
