@@ -12,8 +12,8 @@ struct FirstScreen: View {
         {
             TabView
             {
-                pageView(imageName: "bell", title: "Random Bell",showDismissButton: false)
-                    .background(Color.red)
+                pageView(imageName: "introductoryImage1", title: "Local Popular Dishes that make you droll",showDismissButton: false)
+                    .background(Color("coreOrange"))
 
                 pageView(imageName: "airplane", title: "aerolane",showDismissButton: false)
                     .background(Color.blue)
@@ -22,7 +22,7 @@ struct FirstScreen: View {
                     .background(Color.green)
             }
             .background(
-                Color.black.edgesIgnoringSafeArea(.all)
+                Color("coreOrange").edgesIgnoringSafeArea(.all)
                   )
             .tabViewStyle(PageTabViewStyle())
         }
@@ -121,8 +121,27 @@ struct pageView : View{
         
         VStack
         {
-            
-            Image(systemName: imageName)
+            HStack
+            {
+                Image("logo")
+                VStack
+                {
+                    Text("LocalEatz")
+                        .font(.system(size: 24, weight: .bold, design: .rounded))
+                        .foregroundStyle(.white)
+                    Divider()
+                        .frame(width:150,height:3)
+                        .overlay(.white)
+                        .padding(.top,-10)
+                        //.padding(.bottom,-100)
+                    Text("Find Local Treasures")
+                        .foregroundStyle(.white)
+                        .font(.system(size: 16, weight: .semibold, design: .rounded))
+                    
+                }
+                .frame(width: .infinity,alignment: .leading)
+            }
+            Image(imageName)
                 .resizable()
                 .frame(width:150,height: 150)
                 .padding()
