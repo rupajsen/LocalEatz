@@ -93,65 +93,37 @@ struct HomeView: View {
                         {
                             HStack
                             {
-                                HStack {
-                                    
-                                    VStack
-                                    {
-                                        Text("MUMBAI")
-                                            .font(.title)
-                                            .font(.system(size: 22))
-                                            .fontWeight(.bold)
-                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                ForEach(upcomingTripsCard) { item in
+                                    HStack {
                                         
-                                        Text("15 JAN - 19 JAN")
-                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                                            .fontWeight(.bold)
+                                        VStack
+                                        {
+                                            Text(item.placeName)
+                                                .font(.title)
+                                                .font(.system(size: 22))
+                                                .fontWeight(.bold)
+                                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                            
+                                            Text(item.placeDate)
+                                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                                .fontWeight(.bold)
+                                            
+                                            
+                                            Text(item.knowMore)
+                                                .underline()
+                                                .font(.system(size:15, weight: .semibold, design: .rounded))
+                                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                                        }
+                                        .padding(10)
                                         
+                                        Image(item.placeImage)
+                                            .resizable()
+                                            .frame(width:200,height: 150)
                                         
-                                        Text("Know more")
-                                            .underline()
-                                            .font(.system(size:15, weight: .semibold, design: .rounded))
-                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                                     }
-                                    .padding(10)
-                                    
-                                    Image("mumbai")
-                                        .resizable()
-                                        .frame(width:200,height: 150)
-                                    
+                                    .background(Color.white)
+                                    .cornerRadius(15)
                                 }
-                                .background(Color.white)
-                                .cornerRadius(15)
-                                
-                                HStack {
-                                    VStack
-                                    {
-                                        Text("LUCKNOW")
-                                            .font(.title)
-                                            .font(.system(size: 22))
-                                            .fontWeight(.bold)
-                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                                        
-                                        Text("18 NOW - 19 NOV")
-                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                                            .fontWeight(.bold)
-                                        
-                                        
-                                        Text("Know more")
-                                            .underline()
-                                            .font(.system(size:15, weight: .semibold, design: .rounded))
-                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                                    }
-                                    .padding(10)
-                                    
-                                    Image("lucknow")
-                                        .resizable()
-                                        .frame(width:200,height: 150)
-                                    
-                                }
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                .background(Color.white)
-                                .cornerRadius(15)
                                 
                             }
                             
@@ -177,114 +149,64 @@ struct HomeView: View {
                         {
                             HStack
                             {
-                                VStack
-                                {
-                                    Image("dhaba")
-                                        .resizable()
-                                        .frame(width:200,height: 100)
-                                    NavigationLink("Gulshan Dhaba", destination: AboutView())
-                                        .font(.system(size: 18, weight: .medium, design: .rounded))
-                                        .foregroundColor(.black)
+                                ForEach(Restaurantcards) { item in
+                                    VStack
+                                    {
+                                        Image(item.image)
+                                            .resizable()
+                                            .frame(width:200,height: 100)
+                                        NavigationLink(item.restaurantName, destination: AboutView())
+                                            .font(.system(size: 18, weight: .medium, design: .rounded))
+                                            .foregroundColor(.black)
+                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                                            .padding(.bottom,-3)
+                                            .padding(.leading,5)
+                                        HStack
+                                        {
+                                            Image(systemName: "star.fill")
+                                                .symbolRenderingMode(.multicolor)
+                                            Text(item.rating)
+                                                .font(.system(size: 14, weight: .thin, design: .rounded))
+                                            Text(item.numberOfRatings)
+                                                .font(.system(size: 14, weight: .thin, design: .rounded))
+                                        }
                                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                        .padding(.bottom,-3)
+                                        .padding(.bottom,3)
                                         .padding(.leading,5)
-                                    HStack
-                                    {
-                                        Image(systemName: "star.fill")
-                                            .symbolRenderingMode(.multicolor)
-                                        Text("4.3")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                        Text("(35+)")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                    }
-                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.bottom,3)
-                                    .padding(.leading,5)
-                                    HStack
-                                    {
-                                        Image(systemName: "clock")
-                                            .symbolRenderingMode(.multicolor)
-                                        Text("10-15 mins")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                    }
-                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.leading,5)
-                                    HStack{
-                                        Text("FISH FRY")
-                                            .font(.system(size: 12, weight: .thin, design: .rounded))
-                                            .padding(6)
-                                            .background(Color("softBackground"))
-                                            .cornerRadius(5)
                                         
-                                        Text("FAST FOOD")
-                                            .font(.system(size: 12, weight: .thin, design: .rounded))
-                                            .padding(6)
-                                            .background(Color("softBackground"))
-                                            .cornerRadius(5)
-                                    }
-                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.leading,5)
-                                    .padding(.bottom,15)
-                                    
-                                }
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .padding(.trailing,20)
-                                
-                                
-                                VStack
-                                {
-                                    Image("garg")
-                                        .resizable()
-                                        .frame(width:200,height: 100)
-                                    Text("Garg Chaat")
-                                        .font(.system(size: 18, weight: .medium, design: .rounded))
+                                        HStack
+                                        {
+                                            Image(systemName: "clock")
+                                                .symbolRenderingMode(.multicolor)
+                                            Text(item.timimg)
+                                                .font(.system(size: 14, weight: .thin, design: .rounded))
+                                        }
                                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                        .padding(.bottom,-3)
                                         .padding(.leading,5)
-                                    HStack
-                                    {
-                                        Image(systemName: "star.fill")
-                                            .symbolRenderingMode(.multicolor)
-                                        Text("4.2")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                        Text("(20+)")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                    }
-                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.bottom,3)
-                                    .padding(.leading,5)
-                                    HStack
-                                    {
-                                        Image(systemName: "clock")
-                                            .symbolRenderingMode(.multicolor)
-                                        Text("10 mins")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                    }
-                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.leading,5)
-                                    HStack{
-                                        Text("FISH FRY")
-                                            .font(.system(size: 12, weight: .thin, design: .rounded))
-                                            .padding(6)
-                                            .background(Color("softBackground"))
-                                            .cornerRadius(5)
                                         
-                                        Text("FAST FOOD")
-                                            .font(.system(size: 12, weight: .thin, design: .rounded))
-                                            .padding(6)
-                                            .background(Color("softBackground"))
-                                            .cornerRadius(5)
+                                        HStack{
+                                            Text(item.famousFood[0])
+                                                .font(.system(size: 12, weight: .thin, design: .rounded))
+                                                .padding(6)
+                                                .background(Color("softBackground"))
+                                                .cornerRadius(5)
+                                            
+                                            Text(item.famousFood[1])
+                                                .font(.system(size: 12, weight: .thin, design: .rounded))
+                                                .padding(6)
+                                                .background(Color("softBackground"))
+                                                .cornerRadius(5)
+                                        }
+                                        .frame(maxWidth: .infinity,alignment: .leading)
+                                        .padding(.leading,5)
+                                        .padding(.bottom,15)
                                     }
                                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.leading,5)
-                                    .padding(.bottom,15)
-                                    
-                                }
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                .background(Color.white)
-                                .cornerRadius(10)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .padding(.trailing,20)
+
+                                                    } 
                             }
                             
                         }.padding(.bottom,20).padding(.horizontal,20)
@@ -292,7 +214,6 @@ struct HomeView: View {
                     
                     
                     Divider()
-                    
                     VStack
                     {
                         HStack{
@@ -310,54 +231,33 @@ struct HomeView: View {
                         {
                             HStack
                             {
-                                VStack
-                                {
-                                    Image("fishFry")
-                                        .resizable()
-                                        .frame(width:200,height: 100)
-                                    Text("Fish Fry")
-                                        .font(.system(size: 18, weight: .medium, design: .rounded))
-                                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                        .padding(.bottom,-3)
-                                        .padding(.leading,5)
-                                    
-                                    Text("Gulshan Plaza")
-                                        .font(.system(size: 18, weight: .light, design: .rounded))
-                                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                        .padding(.bottom,-3)
-                                        .padding(.leading,5)
-                                    
-                                    
+                                ForEach(localDelicaciesCard){ item in
+                                    VStack
+                                    {
+                                        Image(item.foodImage)
+                                            .resizable()
+                                            .frame(width:200,height: 100)
+                                        Text(item.foodName)
+                                            .font(.system(size: 18, weight: .medium, design: .rounded))
+                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                                            .padding(.bottom,-3)
+                                            .padding(.leading,5)
+                                        
+                                        Text(item.foodRestaurant)
+                                            .font(.system(size: 18, weight: .light, design: .rounded))
+                                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                                            .padding(.bottom,-3)
+                                            .padding(.leading,5)
+                                        
+                                        
+                                    }
+                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .padding(.trailing,20)
                                 }
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .padding(.trailing,20)
-                                
-                                
-                                VStack
-                                {
-                                    Image("dalMakhni")
-                                        .resizable()
-                                        .frame(width:200,height: 100)
-                                    Text("Butter Chicken")
-                                        .font(.system(size: 18, weight: .medium, design: .rounded))
-                                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                        .padding(.bottom,-3)
-                                        .padding(.leading,5)
-                                    
-                                    Text("Gulshan Plaza")
-                                        .font(.system(size: 18, weight: .light, design: .rounded))
-                                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                        .padding(.bottom,-3)
-                                        .padding(.leading,5)
-                                    
-                                }
-                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                            }
                             
+                            }
                         }.padding(.bottom,20).padding(.horizontal,20)
                     }
                     

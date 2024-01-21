@@ -32,6 +32,9 @@
 		A132F5372B4FD09800FD254B /* upcomingTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132F5362B4FD09800FD254B /* upcomingTrips.swift */; };
 		A132F5392B4FD55F00FD254B /* localfoodPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132F5382B4FD55F00FD254B /* localfoodPlaces.swift */; };
 		A14227B92B4E723F0000EE4F /* IntroductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14227B82B4E723F0000EE4F /* IntroductionData.swift */; };
+		A1F744122B5D14F500BC936F /* RestaurantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F744112B5D14F500BC936F /* RestaurantData.swift */; };
+		A1F744142B5D1F6500BC936F /* localDelicaciesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F744132B5D1F6500BC936F /* localDelicaciesData.swift */; };
+		A1F744162B5D219D00BC936F /* upcomingTripsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F744152B5D219D00BC936F /* upcomingTripsData.swift */; };
 		A1FF98012B4594E400CDDAAE /* AddFoodie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FF98002B4594E400CDDAAE /* AddFoodie.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		A132F5362B4FD09800FD254B /* upcomingTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upcomingTrips.swift; sourceTree = "<group>"; };
 		A132F5382B4FD55F00FD254B /* localfoodPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localfoodPlaces.swift; sourceTree = "<group>"; };
 		A14227B82B4E723F0000EE4F /* IntroductionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionData.swift; sourceTree = "<group>"; };
+		A1F744112B5D14F500BC936F /* RestaurantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantData.swift; sourceTree = "<group>"; };
+		A1F744132B5D1F6500BC936F /* localDelicaciesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localDelicaciesData.swift; sourceTree = "<group>"; };
+		A1F744152B5D219D00BC936F /* upcomingTripsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upcomingTripsData.swift; sourceTree = "<group>"; };
 		A1FF98002B4594E400CDDAAE /* AddFoodie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				A14227B82B4E723F0000EE4F /* IntroductionData.swift */,
+				A1F744112B5D14F500BC936F /* RestaurantData.swift */,
+				A1F744132B5D1F6500BC936F /* localDelicaciesData.swift */,
+				A1F744152B5D219D00BC936F /* upcomingTripsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +248,7 @@
 				A14227B92B4E723F0000EE4F /* IntroductionData.swift in Sources */,
 				A1FF98012B4594E400CDDAAE /* AddFoodie.swift in Sources */,
 				3F16424A2B4A97B4000BB5B3 /* login_page.swift in Sources */,
+				A1F744162B5D219D00BC936F /* upcomingTripsData.swift in Sources */,
 				3F6D71162B348C9900135C37 /* ReviewView.swift in Sources */,
 				3F0E15822B2DFD42001A3BBB /* ContentView.swift in Sources */,
 				3FDEE7A22B401A18003D9275 /* PlacesVisited.swift in Sources */,
@@ -246,11 +256,13 @@
 				3FDEE7A42B407ABC003D9275 /* MyReviews.swift in Sources */,
 				3F0E15942B2E2CE3001A3BBB /* ItineraryView.swift in Sources */,
 				A132F5372B4FD09800FD254B /* upcomingTrips.swift in Sources */,
+				A1F744142B5D1F6500BC936F /* localDelicaciesData.swift in Sources */,
 				A132F5392B4FD55F00FD254B /* localfoodPlaces.swift in Sources */,
 				3FBB01D22B3DC68C00B18F04 /* AddRestaurant.swift in Sources */,
 				3F6D71122B3484EC00135C37 /* ItineraryView2.swift in Sources */,
 				7FA2A8632B4E5C0C00C450A6 /* RestaurantRecommendation.swift in Sources */,
 				3F97E4052B4C7CC0004A8BA9 /* EditProfile.swift in Sources */,
+				A1F744122B5D14F500BC936F /* RestaurantData.swift in Sources */,
 				3F3B1E242B3C7ED100FE49E7 /* HomeView.swift in Sources */,
 				3F6D71142B348C7200135C37 /* AboutView.swift in Sources */,
 				3F0E15922B2E1FA1001A3BBB /* MapView.swift in Sources */,

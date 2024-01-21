@@ -68,13 +68,6 @@ struct AboutView: View {
                             }, message: {
                               Text("")
                             })
-                        
-                        /*.alert(isPresented: $showAlert, content: {
-                            /*Alert(title: Text("Login"), message: Text("Login/signup to add reviews"), dismissButton: .cancel())*/
-                            Alert(title: Text("Login to add reviews"),
-                                  primaryButton: .destructive(Text("Login")),
-                                  secondaryButton: .cancel())
-                        })*/
                         .font(.system(size: 20, weight: .regular, design: .rounded))
                         .padding(15)
                         .padding(.horizontal,90)
@@ -82,15 +75,6 @@ struct AboutView: View {
                         .background(Color("coreOrange")
                             .cornerRadius(25))
                         .padding(.bottom)
-
-                        /*Text("Add Review")
-                            .font(.system(size: 20, weight: .regular, design: .rounded))
-                            .padding(15)
-                            .padding(.horizontal,90)
-                            .foregroundColor(.white)
-                            .background(Color("orange")
-                                .cornerRadius(25))
-                            .padding(.bottom)*/
 
                     }
                     
