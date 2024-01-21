@@ -12,8 +12,8 @@ struct ProfileView: View {
     @State private var showingEditProfile:Bool = false
     
     var body: some View {
-//        NavigationView
-//        {
+        NavigationView
+        {
             VStack{
                 ZStack {
                    /* HStack {
@@ -189,7 +189,7 @@ struct ProfileView: View {
                 Spacer()
             }.padding()
                 .background(Color("backgroundColor"))
-//        }
+        }
     }
 }
 

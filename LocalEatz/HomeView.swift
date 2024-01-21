@@ -21,13 +21,15 @@ struct HomeView: View {
                         .foregroundColor(.orange)
                         .padding(.leading,40)
                         .padding(.trailing)
-                    NavigationLink(destination: login_page().navigationBarBackButtonHidden(false)) {
-                        Image(systemName: "person.crop.circle")
-                            .resizable()
-                            .frame(width:36,height:36)
-                            .foregroundColor(.black)
-                    }
+                    
+//                    NavigationLink(destination: login_page().navigationBarBackButtonHidden(false)) {
+//                        Image(systemName: "person.crop.circle")
+//                            .resizable()
+//                            .frame(width:36,height:36)
+//                            .foregroundColor(.black)
+//                    }
                 }
+                
                 .padding(.bottom)
                 ScrollView{
                     

@@ -64,6 +64,18 @@ struct ContentView: View {
             }
             .tag("four")
             
+            NavigationView {
+                VStack
+                {
+                    ProfileView()
+                }
+                
+            }
+            .tabItem {
+                Label("Profile", systemImage: "person.crop.circle")
+            }
+            .tag("five")
+            
                 /*HomeView()
                     .tabItem{
                         Image(systemName: "house")
