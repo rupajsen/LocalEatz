@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     @State private var selectedTab = "One"
     var body: some View {
        // NavigationView{
@@ -67,7 +68,13 @@ struct TabBarView: View {
             NavigationView {
                 VStack
                 {
-                    ProfileView()
+                    Group{
+                        if viewModel.userSession != nil{
+                            AccountView()
+                        } else {
+                            LoginView()
+                        }
+                    }
                 }
                 
             }

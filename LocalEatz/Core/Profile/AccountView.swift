@@ -35,6 +35,7 @@ struct AccountView: View {
                     }
                 }
                 
+                
                 Section("General"){
                     HStack {
                         SettingsRowView(imageName: "gear", title: "Version", tintColor: Color(.systemGray))
