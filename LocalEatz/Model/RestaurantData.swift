@@ -20,5 +20,5 @@ struct RestaurantData: Identifiable
 var Restaurantcards : [RestaurantData] = [
     RestaurantData(image: "dhaba", restaurantName: "Gulshan Dhaba", rating: "4.3", numberOfRatings: "(35+)", timimg: "10-15 mins", famousFood: ["Fish Fry","Fast Food"]),
     RestaurantData(image: "garg", restaurantName: "Garg Chaat", rating: "4.2", numberOfRatings: "(20+)", timimg: "10 mins", famousFood: ["Fish Fry","Fast Food"]),
-    RestaurantData(image: "35", restaurantName: "35 Brewhouse", rating: "5.0", numberOfRatings: "(180+)", timimg: "25 mins", famousFood: ["Vegetarian Friendly", "Vegan Options"])
+    RestaurantData(image: "35", restaurantName: "35 Brewhouse", rating: "5.0", numberOfRatings: "(180+)", timimg: "25 mins", famousFood: ["Gluten Free Options", "Vegan Options"])
 ]

@@ -146,7 +146,7 @@ struct ProfileView: View {
                 
                 
                 NavigationLink {
-                    AddRestaurant().navigationBarBackButtonHidden(true)
+                    AddRestaurant().navigationBarBackButtonHidden(false)
                 } label: {
                     HStack(spacing:155){
                         Text("Add Restaurant")                            .foregroundColor(.black)
@@ -166,7 +166,7 @@ struct ProfileView: View {
                 
                 
                 NavigationLink {
-                    AddFoodie().navigationBarBackButtonHidden(true)
+                    AddFoodie().navigationBarBackButtonHidden(false)
                 } label: {
                     HStack(spacing:180){
                         Text("Add Foodie")                            .foregroundColor(.black)
