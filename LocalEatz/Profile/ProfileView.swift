@@ -82,7 +82,7 @@ struct ProfileView: View {
                 
                 
                 NavigationLink {
-                    MyFriends().navigationBarBackButtonHidden(true)
+                    MyFriends().navigationBarBackButtonHidden(false)
                 } label: {
                     HStack(spacing:185)
                     {
@@ -106,7 +106,7 @@ struct ProfileView: View {
                 
                 
                 NavigationLink {
-                    PlacesVisited().navigationBarBackButtonHidden(true)
+                    PlacesVisited().navigationBarBackButtonHidden(false)
                 } label: {
                     HStack(spacing:165){
                         Text("Places Visited")                            .foregroundColor(.black)
@@ -125,7 +125,7 @@ struct ProfileView: View {
                 }
                 
                 NavigationLink {
-                    MyReviews().navigationBarBackButtonHidden(true)
+                    MyReviews().navigationBarBackButtonHidden(false)
                 } label: {
                     HStack(spacing:180){
                         Text("My Reviews")                            .foregroundColor(.black)
