@@ -80,7 +80,7 @@ struct pageView : View{
             if showDismissButton
             {
                 NavigationLink {
-                    ContentView().navigationBarBackButtonHidden(true)
+                    TabBarView().navigationBarBackButtonHidden(true)
                 } label: {
                     Image(systemName: "arrow.right.circle")
                         .resizable()
