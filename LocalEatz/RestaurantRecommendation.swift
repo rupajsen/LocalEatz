@@ -89,17 +89,22 @@ struct RestaurantRecommendation: View {
                             .padding()
                         
                         
-                        ScrollView(.horizontal,showsIndicators: false)
+                        ScrollView(.vertical,showsIndicators: false)
                         {
-                            HStack
-                            {
+                            //VStack
+                            //{
                                 VStack
                                 {
-                                    Image("dhaba")
-                                        .resizable()
-                                        .frame(width:200,height: 100)
+                                    
+                                    VStack {
+                                        Image("dhaba")
+                                            .resizable()
+                                        .frame(width:360,height: 200)
+                                    }
+                                    .frame(maxWidth:.infinity,alignment:.leading)
+                                        //.padding()
                                     NavigationLink("Gulshan Dhaba", destination: AboutView())
-                                        .font(.system(size: 18, weight: .medium, design: .rounded))
+                                        .font(.system(size: 24, weight: .medium, design: .rounded))
                                         .foregroundColor(.black)
                                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
                                         .padding(.bottom,-3)
@@ -146,68 +151,75 @@ struct RestaurantRecommendation: View {
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
                                 .background(Color.white)
                                 .cornerRadius(10)
-                                .padding(.trailing,20)
+                                .padding(.bottom,20)
                                 
                                 
-                                VStack
-                                {
+                            VStack
+                            {
+                                
+                                VStack {
                                     Image("dhaba")
                                         .resizable()
-                                        .frame(width:200,height: 100)
-                                    Text("Gulshan Dhaba")
-                                        .font(.system(size: 18, weight: .medium, design: .rounded))
-                                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                        .padding(.bottom,-3)
-                                        .padding(.leading,5)
-                                    HStack
-                                    {
-                                        Image(systemName: "star.fill")
-                                            .symbolRenderingMode(.multicolor)
-                                        Text("4.5")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                        Text("(25+)")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                    }
+                                    .frame(width:360,height: 200)
+                                }
+                                .frame(maxWidth:.infinity,alignment:.leading)
+                                    //.padding()
+                                NavigationLink("Gulshan Dhaba", destination: AboutView())
+                                    .font(.system(size: 24, weight: .medium, design: .rounded))
+                                    .foregroundColor(.black)
                                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.bottom,3)
+                                    .padding(.bottom,-3)
                                     .padding(.leading,5)
-                                    HStack
-                                    {
-                                        Image(systemName: "clock")
-                                            .symbolRenderingMode(.multicolor)
-                                        Text("10-15 mins")
-                                            .font(.system(size: 14, weight: .thin, design: .rounded))
-                                    }
-                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.leading,5)
-                                    HStack{
-                                        Text("FISH FRY")
-                                            .font(.system(size: 12, weight: .thin, design: .rounded))
-                                            .padding(6)
-                                            .background(Color("softBackground"))
-                                            .cornerRadius(5)
-                                        
-                                        Text("FAST FOOD")
-                                            .font(.system(size: 12, weight: .thin, design: .rounded))
-                                            .padding(6)
-                                            .background(Color("softBackground"))
-                                            .cornerRadius(5)
-                                    }
-                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                    .padding(.leading,5)
-                                    .padding(.bottom,15)
-                                    
+                                HStack
+                                {
+                                    Image(systemName: "star.fill")
+                                        .symbolRenderingMode(.multicolor)
+                                    Text("4.5")
+                                        .font(.system(size: 14, weight: .thin, design: .rounded))
+                                    Text("(25+)")
+                                        .font(.system(size: 14, weight: .thin, design: .rounded))
                                 }
                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                .background(Color.white)
-                                .cornerRadius(10)
+                                .padding(.bottom,3)
+                                .padding(.leading,5)
+                                HStack
+                                {
+                                    Image(systemName: "clock")
+                                        .symbolRenderingMode(.multicolor)
+                                    Text("10-15 mins")
+                                        .font(.system(size: 14, weight: .thin, design: .rounded))
+                                }
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                                .padding(.leading,5)
+                                HStack{
+                                    Text("FISH FRY")
+                                        .font(.system(size: 12, weight: .thin, design: .rounded))
+                                        .padding(6)
+                                        .background(Color("softBackground"))
+                                        .cornerRadius(5)
+                                    
+                                    Text("FAST FOOD")
+                                        .font(.system(size: 12, weight: .thin, design: .rounded))
+                                        .padding(6)
+                                        .background(Color("softBackground"))
+                                        .cornerRadius(5)
+                                }
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                                .padding(.leading,5)
+                                .padding(.bottom,15)
+                                
                             }
+                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            //.padding(.trailing,20)
+                            //}
                             
                         }.padding(.bottom,20).padding(.horizontal,20)
                     }
                 
                 
-                VStack
+                /*VStack
                 {
                     HStack{
                         Text("Local Delicacies")
@@ -273,7 +285,7 @@ struct RestaurantRecommendation: View {
                         }
                         
                     }.padding(.bottom,20).padding(.horizontal,20)
-                }
+                }*/
                 
             }
         }
