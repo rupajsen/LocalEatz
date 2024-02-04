@@ -141,10 +141,7 @@ struct ProfileView: View {
                         .padding([.bottom],10)
                         .padding([.top],5)
                 
-                }
-                
-                
-                
+                }  
                 NavigationLink {
                     AddRestaurant().navigationBarBackButtonHidden(false)
                 } label: {
