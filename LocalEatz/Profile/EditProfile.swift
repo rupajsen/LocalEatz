@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 struct EditProfile: View {
-    
     @State private var firstName=""
     @State private var lastName=""
     @State private var bday = Date()
@@ -56,6 +55,7 @@ struct EditProfile: View {
                     
                 }
                 
+                
                 HStack{
                     Text("Update")
                         .font(.system(size: 24, weight: .regular, design: .rounded))
@@ -69,7 +69,7 @@ struct EditProfile: View {
                     .padding([.bottom],10)
                     .padding([.top],5)
                 
-                
+               
                 
             }
             .background(Color("backgroundColor"))
