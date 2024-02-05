@@ -116,20 +116,23 @@ struct HomeView: View {
                                                 .font(.system(size:15, weight: .semibold, design: .rounded))
                                                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                                         }
-                                        .padding(10)
+                                        .padding(20)
                                         
                                         Image(item.placeImage)
                                             .resizable()
-                                            .frame(width:200,height: 150)
+                                            .frame(width:160,height: 150)
                                         
                                     }
                                     .background(Color.white)
                                     .cornerRadius(15)
+                                                                    
                                 }
+                            
                                 
                             }
                             
                         }.padding(.bottom,20).padding(.horizontal,20)
+                        
                         
                         Divider()
                         
