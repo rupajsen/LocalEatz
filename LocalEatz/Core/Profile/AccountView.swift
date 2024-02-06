@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
-
+import PhotosUI
 struct AccountView: View {
     @State private var showingEditProfile:Bool = false
     @EnvironmentObject var viewModel: AuthViewModel
+    
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)])
+    private var MyImages : FetchedResults<MyImage>
+    @StateObject private var imagePicker = ImagePicker()
+    
+    @State private var formType: FormType?
+    let columns = [GridItem(.adaptive(minimum: 100))]
+    
+    
     var body: some View {
         if let user = viewModel.currentUser{
+            
             List{
                 Section{
                     HStack {
@@ -107,7 +117,33 @@ struct AccountView: View {
                     }
                     .padding(-10)
                     
+                    // new copied start
                     
+                   /* Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        PhotosPicker("New Image",
+                                     selection: $imagePicker.imageSelection,
+                                     matching: .images,
+                                     photoLibrary: .shared())
+                        .foregroundColor(.black)
+                        //.buttonStyle(.borderedProminent)
+                    })
+                    .onChange(of: imagePicker.uiImage){ newImage in
+                        if let newImage{
+                            formType = .new(newImage)
+                        }
+                    }
+                    .sheet(item: $formType){$0}
+                    
+                    NavigationLink {
+                        RestaurantRecommendation()
+                    } label: {
+                        Text("Show Data")
+                            .foregroundColor(.orange)
+                            .font(.system(size: 15))
+                            //.padding(.leading,-70)
+                    }*/
+                    
+                    //new copied end
                     NavigationLink {
                         AddFoodie().navigationBarBackButtonHidden(false)
                     } label: {
