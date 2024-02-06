@@ -68,6 +68,7 @@
 		A132F5372B4FD09800FD254B /* upcomingTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132F5362B4FD09800FD254B /* upcomingTrips.swift */; };
 		A132F5392B4FD55F00FD254B /* localfoodPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A132F5382B4FD55F00FD254B /* localfoodPlaces.swift */; };
 		A14227B92B4E723F0000EE4F /* IntroductionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14227B82B4E723F0000EE4F /* IntroductionData.swift */; };
+		A1A56D802B72594800F5F552 /* locationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A56D7F2B72594800F5F552 /* locationManager.swift */; };
 		A1F744122B5D14F500BC936F /* RestaurantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F744112B5D14F500BC936F /* RestaurantData.swift */; };
 		A1F744142B5D1F6500BC936F /* localDelicaciesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F744132B5D1F6500BC936F /* localDelicaciesData.swift */; };
 		A1F744162B5D219D00BC936F /* upcomingTripsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F744152B5D219D00BC936F /* upcomingTripsData.swift */; };
@@ -110,6 +111,7 @@
 		A132F5362B4FD09800FD254B /* upcomingTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upcomingTrips.swift; sourceTree = "<group>"; };
 		A132F5382B4FD55F00FD254B /* localfoodPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localfoodPlaces.swift; sourceTree = "<group>"; };
 		A14227B82B4E723F0000EE4F /* IntroductionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionData.swift; sourceTree = "<group>"; };
+		A1A56D7F2B72594800F5F552 /* locationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationManager.swift; sourceTree = "<group>"; };
 		A1F744112B5D14F500BC936F /* RestaurantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantData.swift; sourceTree = "<group>"; };
 		A1F744132B5D1F6500BC936F /* localDelicaciesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localDelicaciesData.swift; sourceTree = "<group>"; };
 		A1F744152B5D219D00BC936F /* upcomingTripsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upcomingTripsData.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		3F0E157E2B2DFD42001A3BBB /* LocalEatz */ = {
 			isa = PBXGroup;
 			children = (
+				A1A56D7E2B72593000F5F552 /* User location */,
 				3FDA27452B5D55D7003F0EE8 /* App */,
 				3FDA27432B5D55B9003F0EE8 /* Core */,
 				3FDA27422B5D55A9003F0EE8 /* Components */,
@@ -319,6 +322,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A1A56D7E2B72593000F5F552 /* User location */ = {
+			isa = PBXGroup;
+			children = (
+				A1A56D7F2B72594800F5F552 /* locationManager.swift */,
+			);
+			path = "User location";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +441,7 @@
 				3F6D71162B348C9900135C37 /* ReviewView.swift in Sources */,
 				3F0E15822B2DFD42001A3BBB /* TabBarView.swift in Sources */,
 				3FDEE7A22B401A18003D9275 /* PlacesVisited.swift in Sources */,
+				A1A56D802B72594800F5F552 /* locationManager.swift in Sources */,
 				3F0E15802B2DFD42001A3BBB /* LocalEatzApp.swift in Sources */,
 				3FDA274E2B5D5ACA003F0EE8 /* RegistrationView.swift in Sources */,
 				3FDEE7A42B407ABC003D9275 /* MyReviews.swift in Sources */,
@@ -594,6 +606,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "LocalEatz requires access to the device's location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "LocalEatz requires access to the device's location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -628,6 +642,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "LocalEatz requires access to the device's location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "LocalEatz requires access to the device's location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

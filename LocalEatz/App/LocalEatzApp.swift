@@ -11,7 +11,7 @@ import Firebase
 @main
 struct LocalEatzApp: App {
     @StateObject var viewModel = AuthViewModel()
-    
+    @StateObject var LocationManager = locationManager()
     init(){
         FirebaseApp.configure()
     }
@@ -20,6 +20,7 @@ struct LocalEatzApp: App {
         WindowGroup {
             FirstScreen()
                 .environmentObject(viewModel)
+                .environmentObject(LocationManager)
         }
     }
 }

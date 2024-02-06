@@ -8,6 +8,31 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var showLocation = false
+    @State private var text : Double = 0.0
+    @EnvironmentObject var LocationManager : locationManager
+    
+    
+    func getLat(_ input : Double) -> String
+    {
+        var ans : String = ""
+        let newString = showLocation ? LocationManager.location?.coordinate.latitude ?? 0.0 : input
+        if showLocation{
+             ans = String(newString)
+        }
+        return ans
+    }
+    
+    func getLong(_ input : Double) -> String
+    {
+        var ans : String = ""
+        let newString = showLocation ? LocationManager.location?.coordinate.longitude ?? 0.0 : input
+        if showLocation{
+             ans = String(newString)
+        }
+        return ans
+    }
+    
     var body: some View {
         NavigationView
         {

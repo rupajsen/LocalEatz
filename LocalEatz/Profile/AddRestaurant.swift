@@ -7,8 +7,37 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 struct AddRestaurant: View {
+    
+    @State private var showLocation = false
+    @State private var text : Double = 0.0
+    @EnvironmentObject var LocationManager : locationManager
+    
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 12.825502538910111, longitude: 80.04043862405817), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    
+    func getLat(_ input : Double) -> String
+    {
+        var ans : String = ""
+        let newString = showLocation ? LocationManager.location?.coordinate.latitude ?? 0.0 : input
+        let newString1 = showLocation ? LocationManager.location?.coordinate.longitude ?? 0.0 : input
+        if showLocation{
+             ans = String(newString)
+        }
+        return ans
+    }
+    
+    func getLong(_ input : Double) -> String
+    {
+        var ans : String = ""
+        let newString = showLocation ? LocationManager.location?.coordinate.longitude ?? 0.0 : input
+        if showLocation{
+             ans = String(newString)
+            
+        }
+        return ans
+    }
     
     @State private var textInput: String = ""
     
@@ -50,13 +79,15 @@ struct AddRestaurant: View {
                         .padding(.trailing)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
+                    Text("Location")
+                        .font(.title3)
+                        .fontWeight(.regular)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading)
+                        .padding(.top)
+                    
                     HStack {
-                        Text("Location")
-                            .font(.title3)
-                            .fontWeight(.regular)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                            .padding(.top)
+                        
                         
                         Image(systemName: "mappin.and.ellipse")
                             .padding(.top)
@@ -64,16 +95,29 @@ struct AddRestaurant: View {
                             .underline()
                             .font(.system(size: 14))
                             .padding(.top)
+                        
+                       
                         Spacer()
                         
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading,20)
                     
-                    TextField("Choose the Location", text: $textInput)
+                    Map(coordinateRegion: $region)
+                               .frame(width: 350, height: 200)
+                    
+                    
+                    
+                    
+                    Toggle("Use my current Location",isOn: $showLocation)
+                        .padding()
+                    Text(" \(getLat(text)) \(getLong(text))")
+                    
+                    /*TextField("Choose the Location", text: $textInput)
                         .padding(.leading)
                         .padding(.trailing)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.bottom)
+                        .padding(.bottom)*/
                     
                     Text("Tags that suits best")
                         .font(.title3)
@@ -134,7 +178,7 @@ struct AddRestaurant: View {
                         }
                     }
                     
-                    Text("Menu")
+                    /*Text("Menu")
                         .font(.title3)
                         .fontWeight(.regular)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -144,7 +188,7 @@ struct AddRestaurant: View {
                         .padding(.leading)
                         .padding(.trailing)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.bottom)
+                        .padding(.bottom)*/
                     
                     Text("Must Haves")
                         .font(.title3)
@@ -158,17 +202,17 @@ struct AddRestaurant: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.bottom)
                     
-                    Text("Dining Area")
+                    /*Text("Dining Area")
                         .font(.title3)
                         .fontWeight(.regular)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading)
+                        .padding(.leading)*/
                     
-                    TextField("Add Must Haves", text: $textInput)
+                    /*TextField("Add Must Haves", text: $textInput)
                         .padding(.leading)
                         .padding(.trailing)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.bottom)
+                        .padding(.bottom)*/
                     
                     HStack{
                         Text("Submit")
