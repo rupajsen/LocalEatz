@@ -67,7 +67,6 @@ struct AboutView: View {
                                                 .padding(.top,-3)
                                                 .padding(.bottom,10)
                                                 .foregroundStyle(Color.black)
-                                                .multilineTextAlignment(.leading)
                                             
                                             
                                             

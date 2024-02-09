@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A103DFC12B7649BB00F2B4C5 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = A103DFC02B7649BB00F2B4C5 /* Auth0 */; };
+		A103DFC32B764A1500F2B4C5 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = A103DFC22B764A1500F2B4C5 /* Auth0.plist */; };
+		A103DFC62B764B3300F2B4C5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103DFC52B764B3300F2B4C5 /* Profile.swift */; };
 		A1380D7F2B71088E0069B6A5 /* MyImagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1380D7E2B71088E0069B6A5 /* MyImagesApp.swift */; };
 		A1380D812B71088E0069B6A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1380D802B71088E0069B6A5 /* ContentView.swift */; };
 		A1380D832B71088F0069B6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1380D822B71088F0069B6A5 /* Assets.xcassets */; };
@@ -51,7 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A1380D7B2B71088E0069B6A5 /* LocalEatz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalEatz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A103DFC22B764A1500F2B4C5 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		A103DFC52B764B3300F2B4C5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A1380D7B2B71088E0069B6A5 /* MyImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1380D7E2B71088E0069B6A5 /* MyImagesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImagesApp.swift; sourceTree = "<group>"; };
 		A1380D802B71088E0069B6A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1380D822B71088F0069B6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,16 +105,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A103DFC12B7649BB00F2B4C5 /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A103DFC42B764B1D00F2B4C5 /* auth0 */ = {
+			isa = PBXGroup;
+			children = (
+				A103DFC52B764B3300F2B4C5 /* Profile.swift */,
+			);
+			path = auth0;
+			sourceTree = "<group>";
+		};
 		A1380D722B71088E0069B6A5 = {
 			isa = PBXGroup;
 			children = (
-				A1380D7D2B71088E0069B6A5 /* LocalEatz */,
+				A1380D7D2B71088E0069B6A5 /* MyImages */,
 				A1380D7C2B71088E0069B6A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,14 +131,16 @@
 		A1380D7C2B71088E0069B6A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1380D7B2B71088E0069B6A5 /* LocalEatz.app */,
+				A1380D7B2B71088E0069B6A5 /* MyImages.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1380D7D2B71088E0069B6A5 /* LocalEatz */ = {
+		A1380D7D2B71088E0069B6A5 /* MyImages */ = {
 			isa = PBXGroup;
 			children = (
+				A103DFC22B764A1500F2B4C5 /* Auth0.plist */,
+				A103DFC42B764B1D00F2B4C5 /* auth0 */,
 				A18F2F2D2B73C4C70008999F /* viewAll */,
 				A18F2F222B73C4200008999F /* Model */,
 				A18F2F132B73C33F0008999F /* Profile */,
@@ -151,7 +167,7 @@
 				A18F2EFA2B73C17C0008999F /* ReviewView.swift */,
 				A18F2EFC2B73C1B00008999F /* RestaurantRecommendation.swift */,
 			);
-			path = LocalEatz;
+			path = MyImages;
 			sourceTree = "<group>";
 		};
 		A1380D842B71088F0069B6A5 /* Preview Content */ = {
@@ -229,9 +245,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1380D7A2B71088E0069B6A5 /* LocalEatz */ = {
+		A1380D7A2B71088E0069B6A5 /* MyImages */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1380D892B71088F0069B6A5 /* Build configuration list for PBXNativeTarget "LocalEatz" */;
+			buildConfigurationList = A1380D892B71088F0069B6A5 /* Build configuration list for PBXNativeTarget "MyImages" */;
 			buildPhases = (
 				A1380D772B71088E0069B6A5 /* Sources */,
 				A1380D782B71088E0069B6A5 /* Frameworks */,
@@ -241,9 +257,12 @@
 			);
 			dependencies = (
 			);
-			name = LocalEatz;
+			name = MyImages;
+			packageProductDependencies = (
+				A103DFC02B7649BB00F2B4C5 /* Auth0 */,
+			);
 			productName = MyImages;
-			productReference = A1380D7B2B71088E0069B6A5 /* LocalEatz.app */;
+			productReference = A1380D7B2B71088E0069B6A5 /* MyImages.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +280,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A1380D762B71088E0069B6A5 /* Build configuration list for PBXProject "LocalEatz" */;
+			buildConfigurationList = A1380D762B71088E0069B6A5 /* Build configuration list for PBXProject "MyImages" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -270,11 +289,14 @@
 				Base,
 			);
 			mainGroup = A1380D722B71088E0069B6A5;
+			packageReferences = (
+				A103DFBF2B7649BB00F2B4C5 /* XCRemoteSwiftPackageReference "Auth0" */,
+			);
 			productRefGroup = A1380D7C2B71088E0069B6A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1380D7A2B71088E0069B6A5 /* LocalEatz */,
+				A1380D7A2B71088E0069B6A5 /* MyImages */,
 			);
 		};
 /* End PBXProject section */
@@ -285,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1380D862B71088F0069B6A5 /* Preview Assets.xcassets in Resources */,
+				A103DFC32B764A1500F2B4C5 /* Auth0.plist in Resources */,
 				A1380D832B71088F0069B6A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18F2F172B73C36C0008999F /* AddRestaurant.swift in Sources */,
+				A103DFC62B764B3300F2B4C5 /* Profile.swift in Sources */,
 				A18F2F102B73C2D50008999F /* ItineraryView2.swift in Sources */,
 				A1935DF12B71120C00554D53 /* ImageFormView.swift in Sources */,
 				A18F2EF72B73C13B0008999F /* MapView.swift in Sources */,
@@ -467,7 +491,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LocalEatz/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyImages/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -495,7 +519,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LocalEatz/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyImages/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -519,7 +543,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1380D762B71088E0069B6A5 /* Build configuration list for PBXProject "LocalEatz" */ = {
+		A1380D762B71088E0069B6A5 /* Build configuration list for PBXProject "MyImages" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1380D872B71088F0069B6A5 /* Debug */,
@@ -528,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1380D892B71088F0069B6A5 /* Build configuration list for PBXNativeTarget "LocalEatz" */ = {
+		A1380D892B71088F0069B6A5 /* Build configuration list for PBXNativeTarget "MyImages" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1380D8A2B71088F0069B6A5 /* Debug */,
@@ -538,6 +562,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A103DFBF2B7649BB00F2B4C5 /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A103DFC02B7649BB00F2B4C5 /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A103DFBF2B7649BB00F2B4C5 /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A1935DE42B71091700554D53 /* MyImagesDataModel.xcdatamodeld */ = {

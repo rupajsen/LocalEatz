@@ -7,9 +7,8 @@
 
 import SwiftUI
 import PhotosUI
-
+import Auth0
 struct ContentView: View {
-    
     
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)])
@@ -76,10 +75,10 @@ struct ContentView: View {
             .tag("four")
             
             NavigationView {
-                VStack
-                {
-                    ProfileView()
-                }
+                    VStack
+                    {
+                        ProfileView()
+                    }
                 
             }
             .tabItem {
@@ -127,7 +126,13 @@ struct ContentView: View {
             }
         }
     }*/
+    
+    
 }
+
+
+
+
 
 #Preview {
     ContentView()

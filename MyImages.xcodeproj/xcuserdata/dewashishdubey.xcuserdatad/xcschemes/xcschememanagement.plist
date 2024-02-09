@@ -4,8 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LocalEatz.xcscheme_^#shared#^_</key>
+		<key>JWTDecode (Playground) 1.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>JWTDecode (Playground) 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>JWTDecode (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
