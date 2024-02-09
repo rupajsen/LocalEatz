@@ -20,6 +20,7 @@ struct ShowData: View {
     let columns = [GridItem(.adaptive(minimum: 100))]
     
     
+    @State var name : String = ""  //to pass retsaurant name to aboutview
     var body: some View {
         Group
         {
@@ -129,12 +130,16 @@ struct ShowData: View {
                                                                 }
                                                                 .frame(maxWidth:.infinity,alignment:.leading)
                                                                 //.padding()
-                                                                Text(myImage.nameView)
-                                                                    .font(.system(size: 24, weight: .medium, design: .rounded))
-                                                                    .foregroundColor(.black)
-                                                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
-                                                                    .padding(.bottom,-3)
-                                                                    .padding(.leading,5)
+                                                                NavigationLink(){
+                                                                    AboutView(name : myImage.nameView)
+                                                                }label:{
+                                                                    Text(myImage.nameView)
+                                                                        .font(.system(size: 24, weight: .medium, design: .rounded))
+                                                                        .foregroundColor(.black)
+                                                                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,alignment: .leading)
+                                                                        .padding(.bottom,-3)
+                                                                        .padding(.leading,5)
+                                                                }
                                                                 HStack
                                                                 {
                                                                     Image(systemName: "star.fill")

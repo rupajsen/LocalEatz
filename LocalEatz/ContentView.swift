@@ -28,7 +28,7 @@ struct ContentView: View {
             NavigationView {
                 VStack
                 {
-                    HomeView()
+                    HomeView(name: "")
                 }
                 
             }
